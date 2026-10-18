@@ -85,3 +85,104 @@ c) Para un coeficiente de optimismo $\alpha=0.5$, el criterio de Hurwicz selecci
 d) El criterio de Savage selecciona la misma alternativa que el criterio de Wald.
 
 e) Los criterios de Laplace y Punto Ideal coinciden en seleccionar la posición de mediapunta ($d_3$).
+
+\
+
+# Problema 3.
+\
+
+Se considera un problema de decisión bajo incertidumbre con cuatro alternativas de decisión, $d_1,d_2,d_3,d_4$, y tres posibles estados de la naturaleza, $e_1,e_2,e_3$, cuya matriz de valores numéricos es la siguiente:
+
+\
+
+```{=typst}
+#set align(center)
+```
+| Alternativas | $e_1$ | $e_2$ | $e_3$ |
+|:------------:|:-----:|:-----:|:-----:|
+|    $d_1$     |  16   |  30   |  -4   |
+|    $d_2$     |  25   |  17   |   9   |
+|    $d_3$     |  24   |  29   |  -5   |
+|    $d_4$     |   2   |  32   |   0   |
+
+```{=typst}
+#set align(left)
+```
+\
+
+Se pide analizar el problema aplicando los criterios de decisión bajo incertidumbre estudiados (Wald, Optimista, Hurwicz, Savage, Laplace y Punto Ideal), considerando dos situaciones:\
+
+- **Situación favorable:** los valores de la matriz representan beneficios que se desean maximizar.\
+- **Situación desfavorable:** los valores representan costes netos que se desean minimizar.
+
+Para el criterio de Hurwicz se utilizará un coeficiente de optimismo de $\alpha=0.5$.\
+\
+
+## Preguntas
+\
+
+De acuerdo con los resultados obtenidos al aplicar los distintos criterios de decisión bajo incertidumbre, **seleccione todas las afirmaciones verdaderas y justifique cada respuesta, explicando por qué es verdadera o falsa.**
+\
+
+a)  En situación favorable, el criterio de Wald selecciona la alternativa $d_2$.
+
+b)  En situación favorable, los criterios Optimista y de Hurwicz, con $\alpha=0.5$, seleccionan la misma alternativa.
+
+c)  El criterio de Savage selecciona la alternativa $d_1$ tanto en situación favorable como desfavorable.
+
+d)  En situación desfavorable, el criterio de Laplace selecciona la alternativa $d_2$.
+
+e)  El criterio del Punto Ideal selecciona alternativas diferentes en las situaciones favorable y desfavorable.\
+\
+
+# Problema 4: Expansión internacional de una empresa de jamón ibérico
+\
+
+Una empresa española dedicada a la producción y comercialización de jamón ibérico está estudiando la posibilidad de expandirse internacionalmente, introduciendo sus productos en un nuevo mercado.
+
+Tras analizar diferentes posibilidades, la empresa ha seleccionado cuatro países candidatos: **Francia, Alemania, México y Japón**. Sin embargo, desconoce cuál será la demanda de sus productos durante el primer año, por lo que contempla tres posibles estados de la naturaleza: demanda baja, moderada o alta.
+
+Los beneficios netos estimados para el primer año, una vez descontados los costes previstos de producción, transporte, distribución y comercialización, se recogen en la siguiente matriz (valores hipotéticos expresados en miles de euros):
+
+```{=typst}
+#set align(center)
+```
+|  Alternativas   | $e_1$ | $e_2$ | $e_3$ |
+|:---------------:|:-----:|:-----:|:-----:|
+| $d_1$: Francia  |  16   |  30   |  44   |
+| $d_2$: Alemania |  22   |  27   |  35   |
+|  $d_3$: México  |  -6   |  24   |  60   |
+|  $d_4$: Japón   |  -12  |  20   |  74   |
+
+```{=typst}
+#set align(left)
+```
+Donde:
+
+- $e_1$: demanda baja.
+- $e_2$: demanda moderada.
+- $e_3$: demanda alta.
+
+Los valores negativos representan posibles pérdidas económicas durante el primer año.
+
+**¿En qué país debería introducir sus productos la empresa?**
+
+Para responder a esta cuestión, se pide aplicar los criterios de decisión bajo incertidumbre estudiados en la asignatura mediante la función conjunta de R. Se utilizará un coeficiente de optimismo de $\alpha=0.5$ para el criterio de Hurwicz.
+\
+\
+
+## Preguntas
+\
+De acuerdo con los resultados obtenidos al aplicar los distintos criterios de decisión bajo incertidumbre, **seleccione todas las afirmaciones verdaderas y justifique cada respuesta, explicando por qué es verdadera o falsa.**
+\
+
+a) El criterio de Hurwicz, con un coeficiente de optimismo de $\alpha=0.5$, recomienda introducir los productos en Francia.
+
+b) Según el criterio de Wald, Alemania es el país recomendado, ya que presenta el mayor beneficio mínimo.
+
+c) El criterio de Laplace recomienda Japón, puesto que es el país que puede alcanzar el mayor beneficio posible.
+
+d) Según el criterio de Savage, México es la alternativa que minimiza el máximo arrepentimiento.
+
+e) El criterio del Punto Ideal recomienda Francia, al presentar la menor distancia euclídea respecto al punto ideal.
+\
