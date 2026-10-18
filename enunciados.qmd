@@ -1,0 +1,87 @@
+---
+title: "Trabajo grupal. Enunciados"
+author: "Grupo"
+format:
+  html:
+    toc: true
+    toc-location: right
+  typst:
+    toc: true
+---
+
+
+# Problema 1. 
+
+Un decisor debe elegir entre cuatro alternativas, $d_1$, $d_2$, $d_3$ y $d_4$, ante tres posibles estados de la naturaleza, $e_1$, $e_2$ y $e_3$, cuyas probabilidades de ocurrencia son desconocidas.
+
+La tabla de resultados es la siguiente:
+
+| Alternativa | $e_1$ | $e_2$ | $e_3$ |
+|:-----------:|------:|------:|------:|
+| $d_1$       | 5     | 9     | 12    |
+| $d_2$       | 16    | 22    | 15    |
+| $d_3$       | 1     | 14    | 17    |
+| $d_4$       | 8     | 21    | 29    |
+
+Se estudiarán dos situaciones:
+
+- **Situación favorable:** los valores de la tabla representan beneficios, por lo que el objetivo será maximizar los resultados.
+- **Situación desfavorable:** los valores representan costes, por lo que el objetivo, en este caso, será minimizar los resultados.
+
+Utilizando los criterios clásicos de decisión bajo incertidumbre (Wald, Optimista, Hurwicz, Savage, Laplace y Punto Ideal), y tomando un coeficiente de optimismo $\alpha=0.5$ para el criterio de Hurwicz, se pide determinar cuáles de las siguientes afirmaciones son verdaderas.
+
+## Preguntas
+
+a) En situación favorable, el criterio de Wald selecciona la alternativa $d_2$.
+
+b) En situación favorable, el criterio Optimista selecciona la alternativa $d_3$.
+
+c) Para un coeficiente de optimismo $\alpha=0.5$, el criterio de Hurwicz selecciona la posición de mediapunta ($d_3$).
+
+d) El criterio de Savage selecciona la misma alternativa óptima en ambas situaciones.
+
+e) En situación desfavorable, los criterios de Laplace y Punto Ideal seleccionan la misma alternativa óptima.
+
+
+# Problema 2. 
+
+El entrenador de un equipo de fútbol debe decidir en qué posición poner a jugar a un joven futbolista de su plantilla para el próximo partido. Se trata de un jugador capaz de desenvolverse en diferentes posiciones de ataque, pero cuyo rendimiento puede variar en función del planteamiento táctico del equipo rival.
+
+Se contemplan cuatro alternativas:
+
+- $d_1$: **Extremo izquierdo.** Jugar por la banda izquierda, tratando de generar ocasiones de gol desde esa zona.
+- $d_2$: **Extremo derecho.** Desempeñar una función similar pero por la banda derecha.
+- $d_3$: **Mediapunta.** Situarse por detrás del delantero, participando en la creación de jugadas de ataque.
+- $d_4$: **Segundo delantero.** Jugar cerca del delantero, participando más directamente en las ocasiones de gol.
+
+Sin embargo, el entrenador no conoce cómo planteará el partido el equipo contrario. Se consideran tres posibles estados de la naturaleza, según el estilo de juego del rival:
+
+- $e_1$: **Defensa cerrada.** El rival acumula jugadores cerca de su portería, dejando pocos espacios para atacar.
+- $e_2$: **Presión alta.** El rival intenta recuperar el balón cerca del área contraria, dificultando la salida del balón.
+- $e_3$: **Partido abierto.** Ambos equipos disponen de espacios para atacar y se generan más oportunidades ofensivas.
+
+A partir de las características del jugador, el entrenador ha estimado su posible rendimiento ofensivo en cada situación mediante una puntuación de 0 a 100, donde los valores más elevados indican un mejor rendimiento.
+Las valoraciones se recogen en la siguiente tabla:
+
+| Posición | $e_1$ | $e_2$ | $e_3$ |
+|:-------------------|------:|------:|------:|
+| $d_1$: Extremo izquierdo | 84 | 50 | 54 |
+| $d_2$: Extremo derecho | 71 | 73 | 69 |
+| $d_3$: Mediapunta | 61 | 79 | 83 |
+| $d_4$: Segundo delantero | 44 | 72 | 96 |
+
+***Nota: Como no se conocen las probabilidades de los distintos planteamientos del rival, el entrenador debe tomar una decisión bajo incertidumbre.***
+
+Considerando una **situación favorable**, en la que se pretende maximizar el rendimiento del jugador, se aplicarán los criterios de Wald, Optimista, Hurwicz, Savage, Laplace y Punto Ideal. Para el criterio de Hurwicz se utilizará un coeficiente de optimismo $\alpha=0.5$.
+
+Determina cuáles de las siguientes afirmaciones son verdaderas:
+
+a) Según el criterio de Wald, la mejor opción es alinear al jugador como extremo derecho ($d_2$).
+
+b) El criterio Optimista selecciona la posición de extremo izquierdo ($d_1$), ya que es la que permite alcanzar el mayor rendimiento posible.
+
+c) Para un coeficiente de optimismo $\alpha=0.5$, el criterio de Hurwicz selecciona la alternativa $d_3$.
+
+d) El criterio de Savage selecciona la misma alternativa que el criterio de Wald.
+
+e) Los criterios de Laplace y Punto Ideal coinciden en seleccionar la posición de mediapunta ($d_3$).

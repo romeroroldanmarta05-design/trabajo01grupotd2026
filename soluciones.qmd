@@ -1,0 +1,508 @@
+---
+title: "Trabajo grupal. Soluciones"
+author: "Grupo"
+format:
+  html:
+    toc: true
+    toc-location: right
+  typst:
+    toc: true
+---
+# Problema 1. 
+
+## Enunciado.
+
+Un decisor debe elegir entre cuatro alternativas, $d_1$, $d_2$, $d_3$ y $d_4$, ante tres posibles estados de la naturaleza, $e_1$, $e_2$ y $e_3$, cuyas probabilidades de ocurrencia son desconocidas.
+
+La tabla de resultados es la siguiente:
+
+| Alternativa | $e_1$ | $e_2$ | $e_3$ |
+|:-----------:|------:|------:|------:|
+| $d_1$       | 5     | 9     | 12    |
+| $d_2$       | 16    | 22    | 15    |
+| $d_3$       | 1     | 14    | 17    |
+| $d_4$       | 8     | 21    | 29    |
+
+Se estudiarán dos situaciones:
+
+- **Situación favorable:** los valores de la tabla representan beneficios, por lo que el objetivo será maximizar los resultados.
+- **Situación desfavorable:** los valores representan costes, por lo que el objetivo, en este caso, será minimizar los resultados.
+
+Utilizando los criterios clásicos de decisión bajo incertidumbre (Wald, Optimista, Hurwicz, Savage, Laplace y Punto Ideal), y tomando un coeficiente de optimismo $\alpha=0.5$ para el criterio de Hurwicz, se pide determinar cuáles de las siguientes afirmaciones son verdaderas.
+
+
+a) En situación favorable, el criterio de Wald selecciona la alternativa $d_2$.
+
+b) En situación favorable, el criterio Optimista selecciona la alternativa $d_3$.
+
+c) Para un coeficiente de optimismo $\alpha=0.5$, el criterio de Hurwicz selecciona la posición de mediapunta ($d_3$).
+
+d) El criterio de Savage selecciona la misma alternativa óptima en ambas situaciones.
+
+e) En situación desfavorable, los criterios de Laplace y Punto Ideal seleccionan la misma alternativa óptima.
+
+
+##  Solución.
+
+En primer lugar, introducimos la tabla de decisión en R utilizando la función `crea.tablaX()` del archivo `teoriadecision_funciones_incertidumbre.R` .
+
+```{r}
+
+source("teoriadecision_funciones_incertidumbre.R")
+
+X <- crea.tablaX(
+  c(5, 9, 12,
+    16, 22, 15,
+    1, 14, 17,
+    8, 21, 29),
+  numalternativas = 4,
+  numestados = 3
+)
+
+knitr::kable(X, caption = "Tabla de decisión")
+```
+
+
+###  Criterio de Wald
+
+El criterio de Wald (también llamado pesimista) selecciona la **alternativa con el mejor resultado dentro del peor escenario posible**.
+
+**Situación favorable**
+
+En este caso, se elige la alternativa que presenta el *mayor de los valores mínimos*:
+
+$$
+W = \max_i \left\{\min_j x_{ij}\right\}
+$$
+
+**Situación desfavorable**
+
+En este caso, se elige la alternativa que presenta el *menor de los valores máximos*:
+
+$$
+W = \min_i \left\{\max_j x_{ij}\right\}
+$$
+
+Calculamos ambos casos mediante la función `criterio.Wald()` del archivo `teoriadecision_funciones_incertidumbre.R` .:
+
+```{r}
+wald_fav <- criterio.Wald(X, favorable = TRUE)
+wald_desfav <- criterio.Wald(X, favorable = FALSE)
+
+tabla_wald <- data.frame(
+  Alternativa = rownames(X),
+  Favorable = as.numeric(wald_fav$ValorAlternativas),
+  Desfavorable = as.numeric(wald_desfav$ValorAlternativas)
+)
+
+knitr::kable(
+  tabla_wald,
+  col.names = c("Alternativa", "Mínimo (beneficios)", "Máximo (costes)"),
+  caption = "Valoración de las alternativas según el criterio de Wald"
+)
+```
+
+En situación favorable, la alternativa óptima es $d_2$, debido a que presenta el mayor mínimo, con un valor de 15.
+
+En situación desfavorable, la alternativa óptima es $d_1$, porque presenta el menor máximo, con un valor de 12.
+
+
+### Criterio Optimista
+
+El criterio Optimista selecciona la **alternativa que presenta el mejor resultado posible**.
+
+**Situación favorable**
+
+Se elige la alternativa que presenta el *mayor de los valores máximos*:
+
+$$
+O = \max_i \left\{\max_j x_{ij}\right\}
+$$
+
+**Situación desfavorable**
+
+Se elige la alternativa que presenta el *menor de los valores mínimos*:
+
+$$
+O = \min_i \left\{\min_j x_{ij}\right\}
+$$
+
+Calculamos ambos casos mediante la función `criterio.Optimista()`del archivo `teoriadecision_funciones_incertidumbre.R` .:
+
+```{r}
+optimista_fav <- criterio.Optimista(X, favorable = TRUE)
+optimista_desfav <- criterio.Optimista(X, favorable = FALSE)
+
+tabla_optimista <- data.frame(
+  Alternativa = rownames(X),
+  Favorable = as.numeric(optimista_fav$ValorAlternativas),
+  Desfavorable = as.numeric(optimista_desfav$ValorAlternativas)
+)
+
+knitr::kable(
+  tabla_optimista,
+  col.names = c("Alternativa", "Máximo (beneficios)", "Mínimo (costes)"),
+  caption = "Valoración de las alternativas según el criterio Optimista"
+)
+```
+
+En situación favorable la alternativa óptima es $d_4$, porque presenta el mayor máximo, con un valor de 29.
+
+En situación desfavorable, la alternativa óptima es $d_3$, ya que presenta el menor mínimo, con un valor de 1.
+
+
+### Criterio de Hurwicz
+
+El criterio de Hurwicz **combina el mejor y el peor resultado de cada alternativa** mediante un coeficiente de optimismo $\alpha \in [0,1]$.
+
+En este problema se considera $\alpha=0.5$, por lo que ambos resultados tienen el mismo peso.
+
+**Situación favorable**
+
+Se calcula la valoración de cada alternativa mediante:
+
+$$
+H_i=\alpha\max_j x_{ij}+(1-\alpha)\min_j x_{ij}
+$$
+
+Se selecciona la alternativa con mayor valoración.
+
+**Situación desfavorable**
+
+La valoración de cada alternativa se obtiene mediante:
+
+$$
+H_i=(1-\alpha)\max_j x_{ij}+\alpha\min_j x_{ij}
+$$
+
+Se selecciona la *alternativa con menor valoración*.
+
+Procedemos a calcular ambos casos utilizando la función `criterio.Hurwicz()` presente en el archivo anteriormente citado:
+
+```{r}
+hurwicz_fav <- criterio.Hurwicz(
+  X, alfa = 0.5, favorable = TRUE
+)
+
+hurwicz_desfav <- criterio.Hurwicz(
+  X, alfa = 0.5, favorable = FALSE
+)
+
+tabla_hurwicz <- data.frame(
+  Alternativa = rownames(X),
+  Favorable = as.numeric(hurwicz_fav$ValorAlternativas),
+  Desfavorable = as.numeric(hurwicz_desfav$ValorAlternativas)
+)
+
+knitr::kable(
+  tabla_hurwicz,
+  col.names = c("Alternativa", "Favorable", "Desfavorable"),
+  caption = "Valoraciones según el criterio de Hurwicz (alfa = 0.5)"
+)
+```
+
+En situación favorable, las alternativas óptimas son $d_2$ y $d_4$, porque ambas alcanzan la máxima valoración, igual a 18.5. Por tanto, se produce un empate entre ambas decisiones.
+
+En situación desfavorable, la alternativa óptima es $d_1$, ya que su valoración de 8.5 es la menor de todas.
+
+
+#### Representación gráfica del criterio de Hurwicz
+
+Vamos a representar gráficamente las valoraciones de Hurwicz para $\alpha \in [0,1]$.
+
+**Situación favorable**
+
+```{r}
+dibuja.criterio.Hurwicz(X, favorable = TRUE)
+```
+
+**Situación desfavorable**
+
+```{r}
+dibuja.criterio.Hurwicz(X, favorable = FALSE)
+```
+
+
+**Interpretación de los gráficos**
+
+En el caso de situación favorable, la alternativa óptima depende del grado de optimismo. Para valores de $\alpha$ más pequeños que 0.5 se selecciona $d_2$, mientras que para valores superiores se selecciona $d_4$. Cuando $\alpha=0.5$, ambas alternativas presentan la misma valoración, por lo que son óptimas.
+
+En situación desfavorable, la alternativa óptima es $d_1$ para valores de $\alpha$ inferiores a $5/9$, mientras que para valores superiores es $d_3$. Para $\alpha=5/9$ ambas alternativas empatan.
+
+Todo esto demuestra que la elección de la alternativa óptima puede cambiar en función del grado de optimismo del decisor.
+
+
+### Criterio de Savage
+
+El criterio de Savage (también conocido como Minimax del arrepentimiento) selecciona la **alternativa que minimiza el máximo arrepentimiento posible**.
+
+Para aplicarlo, se tiene que construir una matriz de arrepentimientos comparando cada resultado con el mejor valor de su correspondiente estado de la naturaleza.
+
+**Situación favorable**
+
+El arrepentimiento se calcula como:
+
+$$
+r_{ij}=\max_k x_{kj}-x_{ij}
+$$
+
+**Situación desfavorable**
+
+El arrepentimiento se calcula como:
+
+$$
+r_{ij}=x_{ij}-\min_k x_{kj}
+$$
+
+En *ambos casos* se selecciona la *alternativa que minimiza el máximo arrepentimiento*:
+
+$$
+S=\min_i\left\{\max_j r_{ij}\right\}
+$$
+
+Calculo ambos casos utilizando la función `criterio.Savage()`:
+
+```{r}
+savage_fav <- criterio.Savage(X, favorable = TRUE)
+savage_desfav <- criterio.Savage(X, favorable = FALSE)
+
+# Matriz de arrepentimientos favorable
+knitr::kable(
+  savage_fav$Pesos,
+  caption = "Matriz de arrepentimientos en situación favorable"
+)
+
+# Matriz de arrepentimientos desfavorable
+knitr::kable(
+  savage_desfav$Pesos,
+  caption = "Matriz de arrepentimientos en situación desfavorable"
+)
+
+# Valoración de las alternativas
+tabla_savage <- data.frame(
+  Alternativa = rownames(X),
+  Favorable = as.numeric(savage_fav$ValorAlternativas),
+  Desfavorable = as.numeric(savage_desfav$ValorAlternativas)
+)
+
+knitr::kable(
+  tabla_savage,
+  col.names = c("Alternativa", "Favorable", "Desfavorable"),
+  caption = "Arrepentimiento máximo de cada alternativa"
+)
+```
+
+En situación favorable, la alternativa óptima es $d_4$,porqueque presenta el menor arrepentimiento máximo, que es igual a 8.
+
+En situación desfavorable, la alternativa óptima es $d_1$, ya que presenta el menor arrepentimiento máximo, que es igual a 4.
+
+Por tanto, el criterio de Savage selecciona alternativas diferentes en ambas situaciones.
+
+
+### Criterio de Laplace
+
+El criterio de Laplace supone que **todos los estados de la naturaleza son equiprobables**. Por tanto, asigna la misma probabilidad a cada estado y calcula la media aritmética de los resultados de cada alternativa:
+
+$$
+L_i=\frac{1}{n}\sum_{j=1}^{n}x_{ij}
+$$
+
+En situación favorable se selecciona la *alternativa con mayor media*, mientras que en situación desfavorable se selecciona aquella que presenta la *menor media*.
+
+Calculamos ambos casos utilizando la función `criterio.Laplace()`:
+
+```{r}
+laplace_fav <- criterio.Laplace(X, favorable = TRUE)
+laplace_desfav <- criterio.Laplace(X, favorable = FALSE)
+
+tabla_laplace <- data.frame(
+  Alternativa = rownames(X),
+  Favorable = as.numeric(laplace_fav$ValorAlternativas),
+  Desfavorable = as.numeric(laplace_desfav$ValorAlternativas)
+)
+
+knitr::kable(
+  tabla_laplace,
+  digits = 3,
+  col.names = c("Alternativa", "Favorable", "Desfavorable"),
+  caption = "Valoración de las alternativas según el criterio de Laplace"
+)
+```
+
+En situación favorable, la alternativa óptima es $d_4$, porque presenta la mayor media, con un valor aproximado de 19.333.
+
+En situación desfavorable, la alternativa óptima es $d_1$, debido a que presenta la menor media, con un valor aproximado de 8.667.
+
+
+### Criterio de Punto Ideal
+
+El criterio de Punto Ideal consiste en construir un vector formado por los mejores resultados de cada estado de la naturaleza y seleccionar la **alternativa cuya distancia euclídea a dicho punto sea mínima**.
+
+La distancia euclídea se calcula mediante:
+
+$$
+D_i=\sqrt{\sum_{j=1}^{n}(x_{ij}-x_j^*)^2}
+$$
+
+donde $x_j^*$ representa el resultado ideal del estado $e_j$.
+
+**Situación favorable**
+
+El punto ideal está formado por el *máximo de cada columna de la tabla*:
+
+$$
+I_F=(16,22,29)
+$$
+
+**Situación desfavorable**
+
+El punto ideal está formado por el *mínimo de cada columna*:
+
+$$
+I_D=(1,9,12)
+$$
+
+Calculamos las distancias utilizando la función `criterio.PuntoIdeal()`:
+
+```{r}
+ideal_fav <- criterio.PuntoIdeal(X, favorable = TRUE)
+ideal_desfav <- criterio.PuntoIdeal(X, favorable = FALSE)
+
+tabla_ideal <- data.frame(
+  Alternativa = rownames(X),
+  Favorable = as.numeric(ideal_fav$ValorAlternativas),
+  Desfavorable = as.numeric(ideal_desfav$ValorAlternativas)
+)
+
+knitr::kable(
+  tabla_ideal,
+  digits = 3,
+  col.names = c("Alternativa", "Favorable", "Desfavorable"),
+  caption = "Distancias euclídeas al Punto Ideal"
+)
+```
+
+En situación favorable, la alternativa óptima es $d_4$, ya que presenta la menor distancia al punto ideal, aproximadamente 8.062.
+En situación desfavorable, la alternativa óptima es $d_1$, cuya distancia al punto ideal es 4.
+Por tanto, este criterio selecciona alternativas distintas según se consideren beneficios o costes.
+
+
+
+## Respuestas a las preguntas.
+
+**a) Verdadera.** En situación favorable, Wald selecciona $d_2$, ya que presenta el mayor de los mínimos, con un valor de 15.
+
+**b) Falsa.** El criterio Optimista en situación favorable selecciona $d_4$, y no $d_3$, puesto que presenta el mayor resultado posible, igual a 29.
+
+**c) Verdadera.** Para $\alpha=0.5$, el criterio de Hurwicz presenta un empate entre $d_2$ y $d_4$ en situación favorable, ambas con valoración 18.5. En situación desfavorable selecciona $d_1$, con valoración 8.5.
+
+**d) Falsa.** El criterio de Savage selecciona $d_4$ en situación favorable y $d_1$ en situación desfavorable, por lo que las alternativas óptimas son distintas.
+
+**e) Verdadera.** En situación desfavorable, tanto Laplace como Punto Ideal seleccionan la alternativa $d_1$.
+
+Luego, las afirmaciones verdaderas son **a), c) y e)**.
+
+# Problema 2. 
+
+## Enunciado.
+
+El entrenador de un equipo de fútbol debe decidir en qué posición poner a jugar a un joven futbolista de su plantilla para el próximo partido. Se trata de un jugador capaz de desenvolverse en diferentes posiciones de ataque, pero cuyo rendimiento puede variar en función del planteamiento táctico del equipo rival.
+
+Se contemplan cuatro alternativas:
+
+- $d_1$: **Extremo izquierdo.** Jugar por la banda izquierda, tratando de generar ocasiones de gol desde esa zona.
+- $d_2$: **Extremo derecho.** Desempeñar una función similar pero por la banda derecha.
+- $d_3$: **Mediapunta.** Situarse por detrás del delantero, participando en la creación de jugadas de ataque.
+- $d_4$: **Segundo delantero.** Jugar cerca del delantero, participando más directamente en las ocasiones de gol.
+
+Sin embargo, el entrenador no conoce cómo planteará el partido el equipo contrario. Se consideran tres posibles estados de la naturaleza, según el estilo de juego del rival:
+
+- $e_1$: **Defensa cerrada.** El rival acumula jugadores cerca de su portería, dejando pocos espacios para atacar.
+- $e_2$: **Presión alta.** El rival intenta recuperar el balón cerca del área contraria, dificultando la salida del balón.
+- $e_3$: **Partido abierto.** Ambos equipos disponen de espacios para atacar y se generan más oportunidades ofensivas.
+
+A partir de las características del jugador, el entrenador ha estimado su posible rendimiento ofensivo en cada situación mediante una puntuación de 0 a 100, donde los valores más elevados indican un mejor rendimiento.
+Las valoraciones se recogen en la siguiente tabla:
+
+| Posición | $e_1$ | $e_2$ | $e_3$ |
+|:-------------------|------:|------:|------:|
+| $d_1$: Extremo izquierdo | 84 | 50 | 54 |
+| $d_2$: Extremo derecho | 71 | 73 | 69 |
+| $d_3$: Mediapunta | 61 | 79 | 83 |
+| $d_4$: Segundo delantero | 44 | 72 | 96 |
+
+***Nota: Como no se conocen las probabilidades de los distintos planteamientos del rival, el entrenador debe tomar una decisión bajo incertidumbre.***
+
+Considerando una **situación favorable**, en la que se pretende maximizar el rendimiento del jugador, se aplicarán los criterios de Wald, Optimista, Hurwicz, Savage, Laplace y Punto Ideal. Para el criterio de Hurwicz se utilizará un coeficiente de optimismo $\alpha=0.5$.
+
+Determina cuáles de las siguientes afirmaciones son verdaderas:
+
+a) Según el criterio de Wald, la mejor opción es alinear al jugador como extremo derecho ($d_2$).
+
+b) El criterio Optimista selecciona la posición de extremo izquierdo ($d_1$), ya que es la que permite alcanzar el mayor rendimiento posible.
+
+c) Para un coeficiente de optimismo $\alpha=0.5$, el criterio de Hurwicz selecciona la alternativa $d_3$.
+
+d) El criterio de Savage selecciona la misma alternativa que el criterio de Wald.
+
+e) Los criterios de Laplace y Punto Ideal coinciden en seleccionar la posición de mediapunta ($d_3$).
+
+
+## Solución.
+
+Primero introducimos en R la tabla de decisión con las valoraciones estimadas para cada posición del jugador y cada posible planteamiento táctico del equipo rival.
+
+```{r}
+Y <- crea.tablaX(
+  c(84, 50, 54,
+    71, 73, 69,
+    61, 79, 83,
+    44, 72, 96),
+  numalternativas = 4,
+  numestados = 3
+)
+
+knitr::kable(
+  Y,
+  caption = "Tabla de decisión del problema 2"
+)
+```
+
+
+### Aplicación de los criterios de decisión
+
+Como las puntuaciones representan el rendimiento ofensivo estimado del jugador, nos encontramos ante una situación favorable, en la que se pretende maximizar los resultados.
+
+Para resolver el problema se utiliza la función `criterio.Todos()`, que permite aplicar conjuntamente los seis criterios de decisión bajo incertidumbre. Para Hurwicz se considera un coeficiente de optimismo $\alpha=0.5$.
+
+```{r}
+resultados2 <- criterio.Todos(
+  Y,
+  alfa = 0.5,
+  favorable = TRUE
+)
+
+knitr::kable(
+  resultados2,
+  caption = "Resultados de los criterios de decisión del problema 2"
+)
+```
+
+
+## Respuestas a las preguntas.
+
+**a) Verdadera.** El criterio de Wald selecciona la alternativa $d_2$ (extremo derecho), ya que presenta el mayor rendimiento mínimo, con una puntuación de 69.
+
+**b) Falsa.** El criterio Optimista selecciona la alternativa $d_4$ (segundo delantero), porque permite alcanzar el mayor rendimiento posible, con una puntuación de 96.
+
+**c) Verdadera.** Para $\alpha=0.5$, el criterio de Hurwicz selecciona la alternativa $d_3$ (mediapunta), ya que presenta la mayor valoración, igual a 72.
+
+**d) Falsa.** El criterio de Savage selecciona la alternativa $d_3$ (mediapunta), mientras que Wald selecciona $d_2$ (extremo derecho). Por tanto, ambos criterios no coinciden.
+
+**e) Verdadera.** Los criterios de Laplace y Punto Ideal coinciden en seleccionar la alternativa $d_3$ (mediapunta), que presenta el mayor rendimiento medio y la menor distancia al punto ideal respectivamente.
+
+Por tanto, las afirmaciones verdaderas son **a), c) y e)**.
+
+
+
+
