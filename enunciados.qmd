@@ -1,6 +1,7 @@
 ---
 title: "Trabajo grupal. Enunciados"
 author: "Grupo"
+lang: es
 format:
   html:
     toc: true
@@ -9,6 +10,7 @@ format:
     toc: true
 ---
 
+{{< pagebreak >}}
 
 # Problema 1. 
 
@@ -42,6 +44,7 @@ d) El criterio de Savage selecciona la misma alternativa óptima en ambas situac
 
 e) En situación desfavorable, los criterios de Laplace y Punto Ideal seleccionan la misma alternativa óptima.
 
+{{< pagebreak >}}
 
 # Problema 2. 
 
@@ -76,6 +79,8 @@ Considerando una **situación favorable**, en la que se pretende maximizar el re
 
 Determina cuáles de las siguientes afirmaciones son verdaderas:
 
+## Preguntas
+
 a) Según el criterio de Wald, la mejor opción es alinear al jugador como extremo derecho ($d_2$).
 
 b) El criterio Optimista selecciona la posición de extremo izquierdo ($d_1$), ya que es la que permite alcanzar el mayor rendimiento posible.
@@ -87,6 +92,8 @@ d) El criterio de Savage selecciona la misma alternativa que el criterio de Wald
 e) Los criterios de Laplace y Punto Ideal coinciden en seleccionar la posición de mediapunta ($d_3$).
 
 \
+
+{{< pagebreak >}}
 
 # Problema 3.
 \
@@ -135,6 +142,8 @@ d)  En situación desfavorable, el criterio de Laplace selecciona la alternativa
 e)  El criterio del Punto Ideal selecciona alternativas diferentes en las situaciones favorable y desfavorable.\
 \
 
+{{< pagebreak >}}
+
 # Problema 4: Expansión internacional de una empresa de jamón ibérico
 \
 
@@ -171,6 +180,8 @@ Para responder a esta cuestión, se pide aplicar los criterios de decisión bajo
 \
 \
 
+{{< pagebreak >}}
+
 ## Preguntas
 \
 De acuerdo con los resultados obtenidos al aplicar los distintos criterios de decisión bajo incertidumbre, **seleccione todas las afirmaciones verdaderas y justifique cada respuesta, explicando por qué es verdadera o falsa.**
@@ -187,6 +198,8 @@ d) Según el criterio de Savage, México es la alternativa que minimiza el máxi
 e) El criterio del Punto Ideal recomienda Francia, al presentar la menor distancia euclídea respecto al punto ideal.
 \
 
+
+{{< pagebreak >}}
 
 # Problema 5. Fabricación de calzado
 \
@@ -219,8 +232,6 @@ Determine qué alternativa de producción resulta más conveniente aplicando los
 \
 
 ## Preguntas
-\
-
 A partir de la tabla de decisión, determine cuáles de las siguientes afirmaciones son verdaderas y cuáles son falsas. **Puede haber más de una afirmación verdadera.**
 \
 
@@ -235,6 +246,8 @@ A partir de la tabla de decisión, determine cuáles de las siguientes afirmacio
 **e)** Si los resultados representan costes, el criterio de Wald recomienda fabricar botas, mientras que el criterio de Laplace selecciona fabricar zapatos.
 \
 \
+
+{{< pagebreak >}}
 
 # Problema 6. Elección de universidad
 \
@@ -259,6 +272,8 @@ Para resolver el problema, aplique los criterios de Wald, Optimista, Hurwicz, Sa
 \
 \
 
+{{< pagebreak >}}
+
 ## Preguntas
 \
 
@@ -275,3 +290,4 @@ A partir de los resultados obtenidos, determine cuáles de las siguientes afirma
 
 **e)** La elección de universidad es independiente del criterio de decisión utilizado, ya que Sevilla presenta el menor coste en ausencia de beca.
 \
+
