@@ -392,6 +392,8 @@ En situación favorable, la alternativa óptima es $d_4$, ya que presenta la men
 
 Luego, las afirmaciones verdaderas son **a), c) y e)**.
 
+{{< pagebreak >}}
+
 # Problema 2.
 
 ## Enunciado.
@@ -490,6 +492,8 @@ knitr::kable(
 Por tanto, las afirmaciones verdaderas son **a), c) y e)**.
 
 \
+
+{{< pagebreak >}}
 
 # Problema 3.
 
@@ -752,7 +756,7 @@ En [situación desfavorable]{.underline}, las decisiones se reparten entre las c
 Por tanto, no existe una única alternativa recomendada por todos los métodos, lo que pone de manifiesto la **importancia** de la **actitud y postura del decisor ante la incertidumbre**.\
 \
 
-## Preguntas de selección múltiple
+## Preguntas.
 
 \
 
@@ -769,7 +773,7 @@ d)  En situación desfavorable, el criterio de Laplace selecciona la alternativa
 e)  El criterio del Punto Ideal selecciona alternativas diferentes en las situaciones favorable y desfavorable.\
     \
 
-### Solución:
+## Respuestas a las preguntas:
 
 \
 **a) Verdadera.** En situación favorable, el criterio de Wald selecciona la alternativa $d_2$, ya que su beneficio mínimo es 9, el mayor de los mínimos de todas las alternativas ('maxmin'). Por tanto, es la opción que ofrece el mejor resultado en el escenario más desfavorable.
@@ -787,7 +791,9 @@ Por tanto, **las afirmaciones verdaderas son a), c) y e)**.
 \
 \
 
-# Problema 4: Expansión internacional de una empresa de jamón ibérico
+{{< pagebreak >}}
+
+# Problema 4.
 
 ## Enunciado.
 
@@ -824,7 +830,7 @@ Los valores negativos representan posibles pérdidas económicas durante el prim
 Para responder a esta cuestión, se pide aplicar los criterios de decisión bajo incertidumbre estudiados en la asignatura mediante la función conjunta de R. Se utilizará un coeficiente de optimismo de $\alpha=0.5$ para el criterio de Hurwicz.\
 \
 
-## Resolución.
+## Solución.
 
 En este problema nos encontramos ante una situación **favorable**, pues la matriz representan BENEFICIOS NETOS y, por tanto, nuestro objetivo es MAXIMIZARLOS.
 
@@ -881,7 +887,7 @@ Por otro lado, México sería la alternativa recomendada si la empresa desea min
 Así que para este caso, no existe una única alternativa recomendada por todos los criterios, y la decisión final dependerá de las preferencias y de la actitud de la empresa ante la incertidumbre.\
 \
 
-## Preguntas de selección múltiple
+## Preguntas.
 
 \
 De acuerdo con los resultados obtenidos al aplicar los distintos criterios de decisión bajo incertidumbre, **seleccione todas las afirmaciones verdaderas y justifique cada respuesta, explicando por qué es verdadera o falsa.**\
@@ -897,7 +903,7 @@ d)  Según el criterio de Savage, México es la alternativa que minimiza el máx
 e)  El criterio del Punto Ideal recomienda Francia, al presentar la menor distancia euclídea respecto al punto ideal.\
     \
 
-### Solución:
+### Respuestas a las preguntas:
 
 \
 
@@ -913,9 +919,9 @@ e)  El criterio del Punto Ideal recomienda Francia, al presentar la menor distan
 
 Por tanto, **las afirmaciones verdaderas son b), d) y e)**.
 
-{\< pagebreak \>}}
+{{< pagebreak >}}
 
-# Problema 5. Fabricación de calzado
+# Problema 5. 
 
 ## Enunciado.
 
@@ -970,13 +976,13 @@ La matriz de decisión está formada por los resultados económicos correspondie
 tb05
 ```
 
-## Resolución.
+## Solución
 
 ### Situación favorable: maximización de beneficios
 
 Consideramos que los valores de la tabla representan beneficios, por lo que buscamos la alternativa que maximice el resultado según cada criterio.
 
-**Criterio de Wald**
+#### Criterio de Wald
 
 ```{r}
 criterio.Wald(tb05, favorable = TRUE)
@@ -984,7 +990,7 @@ criterio.Wald(tb05, favorable = TRUE)
 
 El criterio de Wald selecciona **zapatos**, ya que su beneficio mínimo es 20 mil euros, superior al beneficio mínimo de las otras dos alternativas.
 
-**Criterio Optimista**
+#### Criterio Optimista
 
 ```{r}
 criterio.Optimista(tb05, favorable = TRUE)
@@ -992,7 +998,7 @@ criterio.Optimista(tb05, favorable = TRUE)
 
 El criterio Optimista selecciona **botas**, ya que es la alternativa que puede proporcionar el mayor beneficio, con un valor de 70 mil euros.
 
-**Criterio de Hurwicz**
+#### Criterio de Hurwicz
 
 ```{r}
 criterio.Hurwicz(tb05, alfa = 0.3, favorable = TRUE)
@@ -1012,7 +1018,7 @@ dibuja.criterio.Hurwicz(tb05, favorable = TRUE)
 
 La gráfica permite observar cómo cambia la valoración de botas, zapatos y sandalias cuando el índice de optimismo varía entre 0 y 1. De esta manera, podemos comparar visualmente las alternativas y comprobar cómo influye el grado de optimismo en la decisión.
 
-**Criterio de Savage**
+#### Criterio de Savage
 
 ```{r}
 criterio.Savage(tb05, favorable = TRUE)
@@ -1020,7 +1026,7 @@ criterio.Savage(tb05, favorable = TRUE)
 
 Según el criterio de Savage, la mejor alternativa es **zapatos**, ya que presenta el menor arrepentimiento máximo, con un valor de 45 mil euros.
 
-**Criterio de Laplace**
+#### Criterio de Laplace
 
 ```{r}
 criterio.Laplace(tb05, favorable = TRUE)
@@ -1028,7 +1034,7 @@ criterio.Laplace(tb05, favorable = TRUE)
 
 El criterio de Laplace considera que todos los estados de la naturaleza son igualmente probables. La mejor alternativa es **botas**, con un beneficio medio aproximado de 33.33 mil euros.
 
-**Criterio del Punto Ideal**
+#### Criterio del Punto Ideal
 
 ```{r}
 criterio.PuntoIdeal(tb05, favorable = TRUE)
@@ -1042,7 +1048,7 @@ En este caso, la mejor alternativa es **zapatos**, con una distancia aproximada 
 
 Ahora consideramos que los valores de la tabla representan costes económicos. Por tanto, el objetivo será seleccionar la alternativa que permita minimizar dichos costes.
 
-**Criterio de Wald**
+#### Criterio de Wald
 
 ```{r}
 criterio.Wald(tb05, favorable = FALSE)
@@ -1052,7 +1058,7 @@ El criterio de Wald selecciona **zapatos**, ya que su coste máximo es de 45 mil
 
 {{< pagebreak >}}
 
-**Criterio Optimista**
+#### Criterio Optimista
 
 ```{r}
 criterio.Optimista(tb05, favorable = FALSE)
@@ -1064,7 +1070,7 @@ En este caso, existe un empate entre las dos alternativas.
 
 {{< pagebreak >}}
 
-**Criterio de Hurwicz**
+#### Criterio de Hurwicz
 
 ```{r}
 criterio.Hurwicz(tb05, alfa = 0.3, favorable = FALSE)
@@ -1082,7 +1088,7 @@ dibuja.criterio.Hurwicz(tb05, favorable = FALSE)
 
 La gráfica permite observar cómo cambia la valoración de botas, zapatos y sandalias cuando el índice de optimismo varía entre 0 y 1. En esta situación desfavorable, al tratarse de costes, se busca seleccionar la alternativa con el menor valor. De esta manera, podemos comparar visualmente las alternativas y comprobar cómo influye el grado de optimismo en la decisión.
 
-**Criterio de Savage**
+#### Criterio de Savage
 
 ```{r}
 criterio.Savage(tb05, favorable = FALSE)
@@ -1090,7 +1096,7 @@ criterio.Savage(tb05, favorable = FALSE)
 
 El criterio de Savage selecciona **zapatos**, ya que presenta el menor arrepentimiento máximo, con un valor de 25 mil euros.
 
-**Criterio de Laplace**
+#### Criterio de Laplace
 
 ```{r}
 criterio.Laplace(tb05, favorable = FALSE)
@@ -1098,7 +1104,7 @@ criterio.Laplace(tb05, favorable = FALSE)
 
 El criterio de Laplace recomienda fabricar **sandalias**, puesto que presenta el menor coste medio, de 30 mil euros.
 
-**Criterio del Punto Ideal**
+#### Criterio del Punto Ideal
 
 ```{r}
 criterio.PuntoIdeal(tb05, favorable = FALSE)
@@ -1118,7 +1124,7 @@ En la situación desfavorable, Wald, Hurwicz, Savage y Punto Ideal también sele
 
 Por tanto, no existe una única alternativa óptima para todos los criterios, ya que cada uno considera de manera diferente los resultados posibles ante la incertidumbre.
 
-## Preguntas de selección múltiple
+## Preguntas.
 
 A partir de los resultados obtenidos, determine cuáles de las siguientes afirmaciones son verdaderas y cuáles son falsas. Puede haber más de una afirmación verdadera.
 
@@ -1134,7 +1140,7 @@ A partir de los resultados obtenidos, determine cuáles de las siguientes afirma
 
 {{< pagebreak >}}
 
-## Solución de las preguntas
+## Respuestas a las preguntas:
 
 **a) Falsa.** El criterio de Wald selecciona fabricar zapatos, ya que presenta el mayor beneficio mínimo (20 mil euros). Sin embargo, Laplace selecciona fabricar botas, puesto que proporciona el mayor beneficio medio (33.33 mil euros).
 
@@ -1150,7 +1156,7 @@ Por tanto, **la afirmación verdadera es la d)**.
 
 {{< pagebreak >}}
 
-# Problema 6. Elección de universidad
+# Problema 6. 
 
 ## Enunciado
 
@@ -1221,7 +1227,7 @@ knitr::kable(tb06)
 
 {{< pagebreak >}}
 
-## Resolución.
+## Solución
 
 Como Lucía desea minimizar los costes de su primer año académico, nos encontramos ante una situación desfavorable.
 
@@ -1257,7 +1263,9 @@ Los valores obtenidos son:
 - Granada: 2.500 euros.
 - Málaga: 2.900 euros.
 
-La alternativa seleccionada es **Sevilla**, ya que presenta el menor coste ponderado. {{< pagebreak >}}
+La alternativa seleccionada es **Sevilla**, ya que presenta el menor coste ponderado.
+
+{{< pagebreak >}}
 
 **Criterio de Savage**
 
@@ -1301,7 +1309,7 @@ En consecuencia, si Lucía desea evitar gastos elevados y mantener una mayor seg
 
 {{< pagebreak >}}
 
-## Preguntas de selección múltiple
+## Preguntas.
 
 A partir de los resultados, determine cuáles de las siguientes afirmaciones son verdaderas y cuáles son falsas. Justifique cada respuesta.
 
@@ -1315,7 +1323,7 @@ d)  Si se aplica el criterio de Hurwicz con $\alpha = 0.5$, las alternativas Sev
 
 e)  La elección de universidad es independiente del criterio de decisión utilizado, ya que Sevilla presenta el menor coste en ausencia de beca.
 
-### Solución:
+## Respuestas a las preguntas:
 
 **a)** **Verdadera.** Si Lucía no obtiene la beca, Málaga presenta el mayor coste, con 4.400 euros. Sin embargo, el criterio Optimista considera el menor coste posible de cada alternativa. En este caso, Málaga puede alcanzar un coste de 1.400 euros si recibe la beca, por lo que es la alternativa seleccionada.
 
@@ -1329,7 +1337,7 @@ e)  La elección de universidad es independiente del criterio de decisión utili
 
 {{< pagebreak >}}
 
-# PROBLEMA 7
+# Problema 7.
 
 **Una empresa debe decidir entre tres estrategias de expansión (**$d_1$**,** $d_2$**,** $d_3$**) frente a tres posibles escenarios de mercado (**$e_1$**,** $e_2$**,** $e_3$ **). La matriz de valores es la siguiente:**
 
@@ -1341,7 +1349,7 @@ e)  La elección de universidad es independiente del criterio de decisión utili
 
 : Tabla de matriz de valores
 
-### CUESTIONARIO
+## Preguntas
 
 1.  En situación favorable, el criterio Pesimista (Wald) selecciona la alternativa $d_3$. En situación desfavorable, elige también a $d_3$. **VERDADERO**
 
@@ -1353,7 +1361,7 @@ e)  La elección de universidad es independiente del criterio de decisión utili
 
 5.  En situación desfavorable, el criterio savage elige a $d_2$. En favorable elige a $d_1$. **VERDADERO**
 
-### SOLUCIONES
+## Respuestas a las preguntas:
 
 1.  En situación favorable, el criterio Pesimista (Wald) selecciona la alternativa $d_3$. En situación desfavorable, elige también a $d_3$
 
@@ -1425,7 +1433,9 @@ solucion1_6_desf$AlternativaOptima
 
 Por el criterio del Punto Ideal, elegimos a $d_2$.
 
-# PROBLEMA 8
+{{< pagebreak >}}
+
+# Problema 8.
 
 **El equipo de fútbol Real de Tomares FC está planificando la próxima temporada y dispone del presupuesto para realizar un único fichaje estrella. La directiva duda entre tres jugadores de élite: Messiano (**$d_1$**), Cristialand (**$d_2$**) y Neyppé Jr. (**$d_3$**).**
 
@@ -1441,7 +1451,7 @@ Por el criterio del Punto Ideal, elegimos a $d_2$.
 
 : Matriz de beneficios
 
-### CUESTIONARIO
+## Preguntas y soluciones.
 
 1.  El criterio Pesimista (Wald) recomienda fichar a Neyppé Jr. **VERDADERO**
 
@@ -1460,6 +1470,6 @@ colnames(tablaX2)=c("Top","Medio","Malo")
 criterio.Todos(tablaX2,alfa=0.5,favorable=T)
 ```
 
-### SOLUCIONES
+## Conclusión.
 
 Tal y como podemos ver en la tabla, el criterio Pesimista de Wald elige a Neyppé Jr por ser el que asegura un beneficio mínimo de 30, por tanto la primera afirmacion es **VERDADERA.** La segunda afirmación asegura que por el criterio Optimista, el Real de Tomares debería fichar a Messiano. Viendo la tabla observamos que esta afirmación **FALSA** ya que Cristialand asegura el máximo beneficio. La tercera afirmación nos informa de que a través del criterio de Laplace, el que asegura mayor rendimiento en término medio es Messiano, lo cual vemos a través de la tabla que es **FALSO** ya que el que ofrece mayor rendimiento medio es Neyppé Jr. La cuarta afirmación nos comenta que a través del criterio de Hurwicz ficharíamos a Cristialand, lo cual vemos que es **VERDADERO.** Por último, la última afirmación es **FALSA** ya que ningún jugador da retorno negativo en el caso de que ofrezcan un rendimiento malo.
