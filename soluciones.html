@@ -196,6 +196,16 @@ window.Quarto = {
   <li><a href="#solución-2" id="toc-solución-2" class="nav-link" data-scroll-target="#solución-2">Solución:</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#problema-7" id="toc-problema-7" class="nav-link" data-scroll-target="#problema-7">PROBLEMA 7</a>
+  <ul class="collapse">
+  <li><a href="#cuestionario" id="toc-cuestionario" class="nav-link" data-scroll-target="#cuestionario">CUESTIONARIO</a></li>
+  <li><a href="#soluciones" id="toc-soluciones" class="nav-link" data-scroll-target="#soluciones">SOLUCIONES</a></li>
+  <li><a href="#problema-2" id="toc-problema-2" class="nav-link" data-scroll-target="#problema-2">PROBLEMA 2</a>
+  <ul class="collapse">
+  <li><a href="#cuestionario-1" id="toc-cuestionario-1" class="nav-link" data-scroll-target="#cuestionario-1">CUESTIONARIO</a></li>
+  <li><a href="#soluciones-1" id="toc-soluciones-1" class="nav-link" data-scroll-target="#soluciones-1">SOLUCIONES</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="soluciones.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
 </div>
@@ -1365,7 +1375,7 @@ $IntervalosAlfa
 <li>Para <span class="math inline">\(\alpha=0.5625\)</span>, las alternativas <span class="math inline">\(d_2\)</span> y <span class="math inline">\(d_4\)</span> son igualmente óptimas.</li>
 <li>Para <span class="math inline">\(0.5625 &lt; \alpha \leq 1\)</span>, la alternativa óptima es <span class="math inline">\(d_4\)</span>.</li>
 </ul>
-<p>Por tanto, como en nuestro problema hemos utilizado <strong><span class="math inline">\(\alpha=0.5\)</span></strong>, la alternativa óptima sigue siendo <strong><span class="math inline">\(d_2\)</span></strong>.<br>
+<p>Por tanto, como en nuestro problema hemos utilizado <span class="math inline">\(\alpha=0.5\)</span>, la alternativa óptima sigue siendo <span class="math inline">\(d_2\)</span>.<br>
 <br>
 </p>
 </section>
@@ -1410,7 +1420,7 @@ d1
  1 </code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> Este criterio selecciona la alternativa que minimiza el máximo arrepentimiento posible. Por eso, la alternativa óptima es <strong><span class="math inline">\(d_1\)</span></strong>, cuyo máximo arrepentimiento es 13.<br>
+<p><strong>Interpretación:</strong> Este criterio selecciona la alternativa que minimiza el máximo arrepentimiento posible. Por eso, la alternativa óptima es <span class="math inline">\(d_1\)</span>, cuyo máximo arrepentimiento es 13.<br>
 <br>
 </p>
 </section>
@@ -1444,7 +1454,7 @@ d2
  2 </code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> Este criterio considera que todos los estados de la naturaleza son equiprobables. Por ello, la alternativa óptima es <strong><span class="math inline">\(d_2\)</span></strong>, con un <strong><em>beneficio medio</em></strong> de 17.<br>
+<p><strong>Interpretación:</strong> Este criterio considera que todos los estados de la naturaleza son equiprobables. Por ello, la alternativa óptima es <span class="math inline">\(d_2\)</span>, con un <strong><em>beneficio medio</em></strong> de 17.<br>
 <br>
 </p>
 </section>
@@ -1482,7 +1492,7 @@ d3
  3 </code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> La alternativa óptima es <strong><span class="math inline">\(d_3\)</span></strong>, puesto que presenta la menor distancia euclídea respecto al punto ideal, formado por los mayores beneficios de cada estado de la naturaleza.<br>
+<p><strong>Interpretación:</strong> La alternativa óptima es <span class="math inline">\(d_3\)</span>, puesto que presenta la menor distancia euclídea respecto al punto ideal, formado por los mayores beneficios de cada estado de la naturaleza.<br>
 <br>
 </p>
 </section>
@@ -1522,7 +1532,7 @@ d2
  2 </code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> Este criterio considera el peor coste posible de cada alternativa. La óptima es <strong><span class="math inline">\(d_2\)</span></strong>, pues presenta el menor coste máximo (25).<br>
+<p><strong>Interpretación:</strong> Este criterio considera el peor coste posible de cada alternativa. La óptima es <span class="math inline">\(d_2\)</span>, pues presenta el menor coste máximo (25).<br>
 <br>
 </p>
 </section>
@@ -1556,7 +1566,7 @@ d3
  3 </code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> La alternativa óptima es <strong><span class="math inline">\(d_3\)</span></strong>, porque presenta el menor coste posible, igual a -5.<br>
+<p><strong>Interpretación:</strong> La alternativa óptima es <span class="math inline">\(d_3\)</span>, porque presenta el menor coste posible, igual a -5.<br>
 <br>
 </p>
 </section>
@@ -1594,7 +1604,7 @@ d3
  3 </code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> La alternativa óptima es <strong><span class="math inline">\(d_3\)</span></strong>, con una valoración de 12, al ponderar por igual el menor y el mayor coste posible de cada alternativa.</p>
+<p><strong>Interpretación:</strong> La alternativa óptima es <span class="math inline">\(d_3\)</span>, con una valoración de 12, al ponderar por igual el menor y el mayor coste posible de cada alternativa.</p>
 <p>Representamos gráficamente cómo varía la decisión óptima en función de <span class="math inline">\(\alpha\)</span>, considerando ahora una situación desfavorable (COSTES).</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dibuja.criterio.Hurwicz</span>(tb01, <span class="at">favorable =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1627,7 +1637,7 @@ $IntervalosAlfa
 [2,] "( 0.222 , 1 )" "3"        </code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> Para valores de <span class="math inline">\(\alpha\)</span> inferiores a 0.222, la alternativa óptima es <span class="math inline">\(d_2\)</span>; para valores superiores, es <span class="math inline">\(d_3\)</span>. En el punto de corte ambas empatan. Por tanto, con <strong><span class="math inline">\(\alpha=0.5\)</span></strong>, seguimos eligiendo <strong><span class="math inline">\(d_3\)</span></strong>.<br>
+<p><strong>Interpretación:</strong> Para valores de <span class="math inline">\(\alpha\)</span> inferiores a 0.222, la alternativa óptima es <span class="math inline">\(d_2\)</span>; para valores superiores, es <span class="math inline">\(d_3\)</span>. En el punto de corte ambas empatan. Por tanto, con <span class="math inline">\(\alpha=0.5\)</span>, seguimos eligiendo <span class="math inline">\(d_3\)</span>.<br>
 <br>
 </p>
 </section>
@@ -1672,7 +1682,7 @@ d1
  1 </code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> La alternativa óptima es <strong><span class="math inline">\(d_1\)</span></strong>, cuyo máximo arrepentimiento es 14. Esta alternativa minimiza el máximo arrepentimiento posible.<br>
+<p><strong>Interpretación:</strong> La alternativa óptima es <span class="math inline">\(d_1\)</span>, cuyo máximo arrepentimiento es 14. Esta alternativa minimiza el máximo arrepentimiento posible.<br>
 <br>
 </p>
 </section>
@@ -1706,7 +1716,7 @@ d4
  4 </code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> La alternativa óptima es <strong><span class="math inline">\(d_4\)</span></strong>, ya que presenta el menor <strong><em>coste medio</em></strong>, aproximadamente igual a 11.33.<br>
+<p><strong>Interpretación:</strong> La alternativa óptima es <span class="math inline">\(d_4\)</span>, ya que presenta el menor <strong><em>coste medio</em></strong>, aproximadamente igual a 11.33.<br>
 <br>
 </p>
 </section>
@@ -1744,7 +1754,7 @@ d4
  4 </code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> La alternativa óptima es <strong><span class="math inline">\(d_4\)</span></strong>, puesto que presenta la menor distancia euclídea respecto al punto ideal, formado por los menores costes de cada estado de la naturaleza.</p>
+<p><strong>Interpretación:</strong> La alternativa óptima es <span class="math inline">\(d_4\)</span>, puesto que presenta la menor distancia euclídea respecto al punto ideal, formado por los menores costes de cada estado de la naturaleza.</p>
 <p><br>
 </p>
 </section>
@@ -1794,7 +1804,7 @@ d4
 </tbody>
 </table>
 <p>Los resultados muestran que la elección de la alternativa óptima <strong>depende del criterio utilizado</strong> y de si los <strong>valores se interpretan como beneficios o como costes</strong>.</p>
-<p>En <u>situación favorable</u>, la alternativa que más veces ha sido recomendada es <strong><span class="math inline">\(d_2\)</span></strong>, seleccionada por tres criterios: Wald, Hurwicz y Laplace.</p>
+<p>En <u>situación favorable</u>, la alternativa que más veces ha sido recomendada es <span class="math inline">\(d_2\)</span>, seleccionada por tres criterios: Wald, Hurwicz y Laplace.</p>
 <p>En <u>situación desfavorable</u>, las decisiones se reparten entre las cuatro alternativas.</p>
 <p>Por tanto, no existe una única alternativa recomendada por todos los métodos, lo que pone de manifiesto la <strong>importancia</strong> de la <strong>actitud y postura del decisor ante la incertidumbre</strong>.<br>
 <br>
@@ -2773,6 +2783,240 @@ Zapatos
 <p><strong>c)</strong> <strong>Falsa.</strong> El criterio de Savage selecciona Sevilla, ya que presenta un arrepentimiento máximo de 100 euros, frente a los 2.000 euros de Granada y los 2.900 euros de Málaga.</p>
 <p><strong>d)</strong> <strong>Falsa.</strong> Aplicando Hurwicz con <span class="math inline">\(\alpha = 0.5\)</span>, se obtiene un coste ponderado de 1.500 euros para Sevilla y de 2.500 euros para Granada. Por tanto, no son igualmente convenientes y se selecciona Sevilla.</p>
 <p><strong>e)</strong> <strong>Falsa.</strong> La decisión depende del criterio aplicado. Aunque Wald, Hurwicz, Savage, Laplace y Punto Ideal seleccionan Sevilla, el criterio Optimista recomienda Málaga. Por tanto, no todos los criterios conducen a la misma decisión.</p>
+<div style="page-break-after: always;"></div>
+</section>
+</section>
+</section>
+<section id="problema-7" class="level1">
+<h1>PROBLEMA 7</h1>
+<p><strong>Una empresa debe decidir entre tres estrategias de expansión (</strong><span class="math inline">\(d_1\)</span><strong>,</strong> <span class="math inline">\(d_2\)</span><strong>,</strong> <span class="math inline">\(d_3\)</span><strong>) frente a tres posibles escenarios de mercado (</strong><span class="math inline">\(e_1\)</span><strong>,</strong> <span class="math inline">\(e_2\)</span><strong>,</strong> <span class="math inline">\(e_3\)</span> <strong>). La matriz de valores es la siguiente:</strong></p>
+<table class="caption-top table">
+<caption>Tabla de matriz de valores</caption>
+<thead>
+<tr class="header">
+<th>Alternativas/Escenarios</th>
+<th><span class="math inline">\(e_1\)</span></th>
+<th><span class="math inline">\(e_2\)</span></th>
+<th><span class="math inline">\(e_3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(d_1\)</span></td>
+<td>12</td>
+<td>8</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(d_2\)</span></td>
+<td>18</td>
+<td>4</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(d_3\)</span></td>
+<td>10</td>
+<td>14</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<section id="cuestionario" class="level3">
+<h3 class="anchored" data-anchor-id="cuestionario">CUESTIONARIO</h3>
+<ol type="1">
+<li><p>En situación favorable, el criterio Pesimista (Wald) selecciona la alternativa <span class="math inline">\(d_3\)</span>. En situación desfavorable, elige también a <span class="math inline">\(d_3\)</span>. <strong>VERDADERO</strong></p></li>
+<li><p>En situación favorable, el criterio Optimista selecciona la alternativa <span class="math inline">\(d_1\)</span>. En desfavorable también elige a <span class="math inline">\(d_1\)</span>. <strong>FALSO</strong></p></li>
+<li><p>En situación desfavorable, el criterio de Laplace determina que la mejor opción es <span class="math inline">\(d_2\)</span>. En favorable elige a <span class="math inline">\(d_1\)</span>. <strong>FALSO</strong></p></li>
+<li><p>Para un alfa=0.5, el criterio de Hurwicz elige a <span class="math inline">\(d_2\)</span> como mejor resultado. Para alfa=0.4 en criterio desfavorable elige a <span class="math inline">\(d_3\)</span>. <strong>FALSO</strong></p></li>
+<li><p>En situación desfavorable, el criterio savage elige a <span class="math inline">\(d_2\)</span>. En favorable elige a <span class="math inline">\(d_1\)</span>. <strong>VERDADERO</strong></p></li>
+</ol>
+</section>
+<section id="soluciones" class="level3">
+<h3 class="anchored" data-anchor-id="soluciones">SOLUCIONES</h3>
+<ol type="1">
+<li>En situación favorable, el criterio Pesimista (Wald) selecciona la alternativa <span class="math inline">\(d_3\)</span>. En situación desfavorable, elige también a <span class="math inline">\(d_3\)</span></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"teoriadecision_funciones_incertidumbre.R"</span>)</span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a>tablaX<span class="ot">=</span><span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">12</span>,<span class="dv">8</span>,<span class="dv">20</span>,<span class="dv">18</span>,<span class="dv">4</span>,<span class="dv">15</span>,<span class="dv">10</span>,<span class="dv">14</span>,<span class="dv">10</span>),<span class="at">ncol=</span><span class="dv">3</span>,<span class="at">byrow=</span>T)</span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(tablaX)<span class="ot">=</span><span class="fu">c</span>(<span class="st">"d1"</span>,<span class="st">"d2"</span>,<span class="st">"d3"</span>)</span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tablaX)<span class="ot">=</span><span class="fu">c</span>(<span class="st">"e1"</span>,<span class="st">"e2"</span>,<span class="st">"e3"</span>)</span>
+<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a>soluciones1_1<span class="ot">=</span><span class="fu">criterio.Wald</span>(tablaX)</span>
+<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>soluciones1_1<span class="sc">$</span>AlternativaOptima</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d3 
+ 3 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>soluciones1_1_desf<span class="ot">=</span><span class="fu">criterio.Wald</span>(tablaX,<span class="at">favorable =</span> F)</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>soluciones1_1_desf<span class="sc">$</span>AlternativaOptima</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d3 
+ 3 </code></pre>
+</div>
+</div>
+<p><strong>VERDADERO</strong></p>
+<ol start="2" type="1">
+<li>En situación favorable, el criterio Optimista selecciona la alternativa <span class="math inline">\(d_1\)</span>. En desfavorable también elige a <span class="math inline">\(d_1\)</span>.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>soluciones1_2<span class="ot">=</span><span class="fu">criterio.Optimista</span>(tablaX)</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>soluciones1_2<span class="sc">$</span>AlternativaOptima</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d1 
+ 1 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>soluciones1_2_desf<span class="ot">=</span><span class="fu">criterio.Optimista</span>(tablaX,<span class="at">favorable =</span> F)</span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>soluciones1_2_desf<span class="sc">$</span>AlternativaOptima</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d2 
+ 2 </code></pre>
+</div>
+</div>
+<p><strong>FALSO</strong></p>
+<ol start="3" type="1">
+<li>En situación desfavorable, el criterio de Laplace determina que la mejor opción es <span class="math inline">\(d_2\)</span>. En favorable elige a <span class="math inline">\(d_1\)</span>.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>soluciones1_3_desf<span class="ot">=</span><span class="fu">criterio.Laplace</span>(tablaX,<span class="at">favorable =</span> F)</span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>soluciones1_3_desf<span class="sc">$</span>AlternativaOptima</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d3 
+ 3 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>soluciones1_3<span class="ot">=</span><span class="fu">criterio.Laplace</span>(tablaX,<span class="at">favorable =</span> T)</span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>soluciones1_3<span class="sc">$</span>AlternativaOptima</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d1 
+ 1 </code></pre>
+</div>
+</div>
+<p><strong>FALSO</strong></p>
+<ol start="4" type="1">
+<li>Para un alfa=0.5, el criterio de Hurwicz elige a <span class="math inline">\(d_2\)</span> como mejor resultado en criterio favorable. Para alfa=0.4 en criterio desfavorable elige a <span class="math inline">\(d_3\)</span>.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>soluciones1_4<span class="ot">=</span><span class="fu">criterio.Hurwicz</span>(tablaX,<span class="at">alfa=</span><span class="fl">0.5</span>) </span>
+<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>soluciones1_4<span class="sc">$</span>AlternativaOptima </span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d1 
+ 1 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>soluciones1_4_desf <span class="ot">=</span> <span class="fu">criterio.Hurwicz</span>(tablaX, <span class="at">alfa =</span> <span class="fl">0.4</span>, <span class="at">favorable =</span> F) </span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>soluciones1_4_desf<span class="sc">$</span>AlternativaOptima</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d2 
+ 2 </code></pre>
+</div>
+</div>
+<p><strong>FALSO</strong></p>
+<ol start="5" type="1">
+<li>En situación desfavorable, el criterio savage elige a <span class="math inline">\(d_2\)</span>. En favorable elige a <span class="math inline">\(d_1\)</span></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>soluciones1_5<span class="ot">=</span><span class="fu">criterio.Savage</span>(tablaX,<span class="at">favorable =</span> F) </span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>soluciones1_5<span class="sc">$</span>AlternativaOptima </span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d2 
+ 2 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>soluciones1_5_fav<span class="ot">=</span><span class="fu">criterio.Savage</span>(tablaX,<span class="at">favorable =</span> T)</span>
+<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a>soluciones1_5_fav<span class="sc">$</span>AlternativaOptima</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d1 
+ 1 </code></pre>
+</div>
+</div>
+<p><strong>VERDADERO</strong></p>
+<p>Resolvemos el último criterio que nos queda por aplicar, el del punto ideal:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>solucion1_6<span class="ot">=</span><span class="fu">criterio.PuntoIdeal</span>(tablaX,<span class="at">favorable =</span> T) </span>
+<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a>solucion1_6<span class="sc">$</span>AlternativaOptima </span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d1 
+ 1 </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>solucion1_6_desf<span class="ot">=</span><span class="fu">criterio.PuntoIdeal</span>(tablaX,<span class="at">favorable =</span> F)</span>
+<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>solucion1_6_desf<span class="sc">$</span>AlternativaOptima</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>d2 
+ 2 </code></pre>
+</div>
+</div>
+<p>Por el criterio del Punto Ideal, elegimos a <span class="math inline">\(d_2\)</span>.</p>
+</section>
+<section id="problema-2" class="level2">
+<h2 class="anchored" data-anchor-id="problema-2">PROBLEMA 2</h2>
+<p><strong>El equipo de fútbol Real de Tomares FC está planificando la próxima temporada y dispone del presupuesto para realizar un único fichaje estrella. La directiva duda entre tres jugadores de élite: Messiano (</strong><span class="math inline">\(d_1\)</span><strong>), Cristialand (</strong><span class="math inline">\(d_2\)</span><strong>) y Neyppé Jr.&nbsp;(</strong><span class="math inline">\(d_3\)</span><strong>).</strong></p>
+<p><strong>El impacto económico y deportivo (medido en retorno de inversión neto en millones de euros) dependerá del rendimiento futuro e impredecible del jugador elegido en el esquema táctico del entrenador (</strong><span class="math inline">\(e_1\)</span><strong>: Rendimiento Top,</strong> <span class="math inline">\(e_2\)</span><strong>: Rendimiento medio,</strong> <span class="math inline">\(e_3\)</span><strong>: Rendimiento malo).</strong></p>
+<p><strong>La matriz de beneficios previstos es la siguiente:</strong></p>
+<table class="caption-top table">
+<caption>Matriz de beneficios</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Jugador(<span class="math inline">\(d_i\)</span>)/Rendimiento(<span class="math inline">\(e_i\)</span>)</th>
+<th>Rendimiento Top <span class="math inline">\(e_1\)</span></th>
+<th>Rendimiento medio <span class="math inline">\(e_2\)</span></th>
+<th>Rendimiento malo <span class="math inline">\(e_3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Messiano</strong> (<span class="math inline">\(d_1\)</span>)</td>
+<td>90</td>
+<td>50</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td><strong>Cristialand</strong> (<span class="math inline">\(d_2\)</span>)</td>
+<td>100</td>
+<td>40</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td><strong>Neyppé Jr</strong>(<span class="math inline">\(d_3\)</span>)</td>
+<td>70</td>
+<td>60</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<section id="cuestionario-1" class="level3">
+<h3 class="anchored" data-anchor-id="cuestionario-1">CUESTIONARIO</h3>
+<ol type="1">
+<li><p>El criterio Pesimista (Wald) recomienda fichar a Neyppé Jr.&nbsp;<strong>VERDADERO</strong></p></li>
+<li><p>El criterio Optimista elige a Messiano. <strong>FALSO</strong></p></li>
+<li><p>Bajo el criterio de Laplace, la opción escogida es Messiano. <strong>FALSO</strong></p></li>
+<li><p>El criterio de Hurwicz (con alfa = 0.5) determina que la alternativa óptima es Cristialand. <strong>VERDADERO</strong></p></li>
+<li><p>Neyppé Jr es el único jugador que evita balances o retornos negativos en el peor escenario posible. <strong>FALSO</strong></p></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a>tablaX2<span class="ot">=</span><span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">90</span>,<span class="dv">50</span>,<span class="dv">10</span>,<span class="dv">100</span>,<span class="dv">40</span>,<span class="dv">5</span>,<span class="dv">70</span>,<span class="dv">60</span>,<span class="dv">30</span>),<span class="at">ncol=</span><span class="dv">3</span>,<span class="at">byrow=</span>T) </span>
+<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(tablaX2)<span class="ot">=</span><span class="fu">c</span>(<span class="st">"Messiano"</span>,<span class="st">"Cristialand"</span>,<span class="st">"Neyppé Jr"</span>) </span>
+<span id="cb105-3"><a href="#cb105-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tablaX2)<span class="ot">=</span><span class="fu">c</span>(<span class="st">"Top"</span>,<span class="st">"Medio"</span>,<span class="st">"Malo"</span>) </span>
+<span id="cb105-4"><a href="#cb105-4" aria-hidden="true" tabindex="-1"></a><span class="fu">criterio.Todos</span>(tablaX2,<span class="at">alfa=</span><span class="fl">0.5</span>,<span class="at">favorable=</span>T)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                Top Medio Malo      Wald   Optimista     Hurwicz   Savage
+Messiano         90    50   10        10          90        50.0       20
+Cristialand     100    40    5         5         100        52.5       25
+Neyppé Jr        70    60   30        30          70        50.0       30
+iAlt.Opt (fav.)  --    --   -- Neyppé Jr Cristialand Cristialand Messiano
+                  Laplace Punto Ideal                   Veces Optima
+Messiano            50.00       24.49                              2
+Cristialand         48.33       32.02                              2
+Neyppé Jr           53.33       30.00                              2
+iAlt.Opt (fav.) Neyppé Jr    Messiano Messiano,Cristialand,Neyppé Jr</code></pre>
+</div>
+</div>
+</section>
+<section id="soluciones-1" class="level3">
+<h3 class="anchored" data-anchor-id="soluciones-1">SOLUCIONES</h3>
+<p>Tal y como podemos ver en la tabla, el criterio Pesimista de Wald elige a Neyppé Jr por ser el que asegura un beneficio mínimo de 30, por tanto la primera afirmacion es <strong>VERDADERA.</strong> La segunda afirmación asegura que por el criterio Optimista, el Real de Tomares debería fichar a Messiano. Viendo la tabla observamos que esta afirmación <strong>FALSA</strong> ya que Cristialand asegura el máximo beneficio. La tercera afirmación nos informa de que a través del criterio de Laplace, el que asegura mayor rendimiento en término medio es Messiano, lo cual vemos a través de la tabla que es <strong>FALSO</strong> ya que el que ofrece mayor rendimiento medio es Neyppé Jr.&nbsp;La cuarta afirmación nos comenta que a través del criterio de Hurwicz ficharíamos a Cristialand, lo cual vemos que es <strong>VERDADERO.</strong> Por último, la última afirmación es <strong>FALSA</strong> ya que ningún jugador da retorno negativo en el caso de que ofrezcan un rendimiento malo.</p>
 </section>
 </section>
 </section>
