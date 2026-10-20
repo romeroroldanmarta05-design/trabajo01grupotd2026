@@ -1425,7 +1425,7 @@ solucion1_6_desf$AlternativaOptima
 
 Por el criterio del Punto Ideal, elegimos a $d_2$.
 
-## PROBLEMA 2
+# PROBLEMA 8
 
 **El equipo de fútbol Real de Tomares FC está planificando la próxima temporada y dispone del presupuesto para realizar un único fichaje estrella. La directiva duda entre tres jugadores de élite: Messiano (**$d_1$**), Cristialand (**$d_2$**) y Neyppé Jr. (**$d_3$**).**
 
@@ -1434,7 +1434,7 @@ Por el criterio del Punto Ideal, elegimos a $d_2$.
 **La matriz de beneficios previstos es la siguiente:**
 
 | Jugador($d_i$)/Rendimiento($e_i$) | Rendimiento Top $e_1$ | Rendimiento medio $e_2$ | Rendimiento malo $e_3$ |
-|----|----|----|----|
+|-------------------|------------------|------------------|------------------|
 | **Messiano** ($d_1$) | 90 | 50 | 10 |
 | **Cristialand** ($d_2$) | 100 | 40 | 5 |
 | **Neyppé Jr**($d_3$) | 70 | 60 | 30 |
