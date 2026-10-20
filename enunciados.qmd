@@ -12,7 +12,7 @@ format:
 
 {{< pagebreak >}}
 
-# Problema 1. 
+# Problema 1.
 
 Un decisor debe elegir entre cuatro alternativas, $d_1$, $d_2$, $d_3$ y $d_4$, ante tres posibles estados de la naturaleza, $e_1$, $e_2$ y $e_3$, cuyas probabilidades de ocurrencia son desconocidas.
 
@@ -20,10 +20,10 @@ La tabla de resultados es la siguiente:
 
 | Alternativa | $e_1$ | $e_2$ | $e_3$ |
 |:-----------:|------:|------:|------:|
-| $d_1$       | 5     | 9     | 12    |
-| $d_2$       | 16    | 22    | 15    |
-| $d_3$       | 1     | 14    | 17    |
-| $d_4$       | 8     | 21    | 29    |
+|    $d_1$    |     5 |     9 |    12 |
+|    $d_2$    |    16 |    22 |    15 |
+|    $d_3$    |     1 |    14 |    17 |
+|    $d_4$    |     8 |    21 |    29 |
 
 Se estudiarán dos situaciones:
 
@@ -34,19 +34,19 @@ Utilizando los criterios clásicos de decisión bajo incertidumbre (Wald, Optimi
 
 ## Preguntas
 
-a) En situación favorable, el criterio de Wald selecciona la alternativa $d_2$.
+a)  En situación favorable, el criterio de Wald selecciona la alternativa $d_2$.
 
-b) En situación favorable, el criterio Optimista selecciona la alternativa $d_3$.
+b)  En situación favorable, el criterio Optimista selecciona la alternativa $d_3$.
 
-c) Para un coeficiente de optimismo $\alpha=0.5$, el criterio de Hurwicz selecciona la posición de mediapunta ($d_3$).
+c)  Para un coeficiente de optimismo $\alpha=0.5$, el criterio de Hurwicz selecciona la posición de mediapunta ($d_3$).
 
-d) El criterio de Savage selecciona la misma alternativa óptima en ambas situaciones.
+d)  El criterio de Savage selecciona la misma alternativa óptima en ambas situaciones.
 
-e) En situación desfavorable, los criterios de Laplace y Punto Ideal seleccionan la misma alternativa óptima.
+e)  En situación desfavorable, los criterios de Laplace y Punto Ideal seleccionan la misma alternativa óptima.
 
 {{< pagebreak >}}
 
-# Problema 2. 
+# Problema 2.
 
 El entrenador de un equipo de fútbol debe decidir en qué posición poner a jugar a un joven futbolista de su plantilla para el próximo partido. Se trata de un jugador capaz de desenvolverse en diferentes posiciones de ataque, pero cuyo rendimiento puede variar en función del planteamiento táctico del equipo rival.
 
@@ -63,15 +63,14 @@ Sin embargo, el entrenador no conoce cómo planteará el partido el equipo contr
 - $e_2$: **Presión alta.** El rival intenta recuperar el balón cerca del área contraria, dificultando la salida del balón.
 - $e_3$: **Partido abierto.** Ambos equipos disponen de espacios para atacar y se generan más oportunidades ofensivas.
 
-A partir de las características del jugador, el entrenador ha estimado su posible rendimiento ofensivo en cada situación mediante una puntuación de 0 a 100, donde los valores más elevados indican un mejor rendimiento.
-Las valoraciones se recogen en la siguiente tabla:
+A partir de las características del jugador, el entrenador ha estimado su posible rendimiento ofensivo en cada situación mediante una puntuación de 0 a 100, donde los valores más elevados indican un mejor rendimiento. Las valoraciones se recogen en la siguiente tabla:
 
-| Posición | $e_1$ | $e_2$ | $e_3$ |
-|:-------------------|------:|------:|------:|
-| $d_1$: Extremo izquierdo | 84 | 50 | 54 |
-| $d_2$: Extremo derecho | 71 | 73 | 69 |
-| $d_3$: Mediapunta | 61 | 79 | 83 |
-| $d_4$: Segundo delantero | 44 | 72 | 96 |
+| Posición                 | $e_1$ | $e_2$ | $e_3$ |
+|:-------------------------|------:|------:|------:|
+| $d_1$: Extremo izquierdo |    84 |    50 |    54 |
+| $d_2$: Extremo derecho   |    71 |    73 |    69 |
+| $d_3$: Mediapunta        |    61 |    79 |    83 |
+| $d_4$: Segundo delantero |    44 |    72 |    96 |
 
 ***Nota: Como no se conocen las probabilidades de los distintos planteamientos del rival, el entrenador debe tomar una decisión bajo incertidumbre.***
 
@@ -81,21 +80,22 @@ Determina cuáles de las siguientes afirmaciones son verdaderas:
 
 ## Preguntas
 
-a) Según el criterio de Wald, la mejor opción es alinear al jugador como extremo derecho ($d_2$).
+a)  Según el criterio de Wald, la mejor opción es alinear al jugador como extremo derecho ($d_2$).
 
-b) El criterio Optimista selecciona la posición de extremo izquierdo ($d_1$), ya que es la que permite alcanzar el mayor rendimiento posible.
+b)  El criterio Optimista selecciona la posición de extremo izquierdo ($d_1$), ya que es la que permite alcanzar el mayor rendimiento posible.
 
-c) Para un coeficiente de optimismo $\alpha=0.5$, el criterio de Hurwicz selecciona la alternativa $d_3$.
+c)  Para un coeficiente de optimismo $\alpha=0.5$, el criterio de Hurwicz selecciona la alternativa $d_3$.
 
-d) El criterio de Savage selecciona la misma alternativa que el criterio de Wald.
+d)  El criterio de Savage selecciona la misma alternativa que el criterio de Wald.
 
-e) Los criterios de Laplace y Punto Ideal coinciden en seleccionar la posición de mediapunta ($d_3$).
+e)  Los criterios de Laplace y Punto Ideal coinciden en seleccionar la posición de mediapunta ($d_3$).
 
 \
 
 {{< pagebreak >}}
 
 # Problema 3.
+
 \
 
 Se considera un problema de decisión bajo incertidumbre con cuatro alternativas de decisión, $d_1,d_2,d_3,d_4$, y tres posibles estados de la naturaleza, $e_1,e_2,e_3$, cuya matriz de valores numéricos es la siguiente:
@@ -126,10 +126,10 @@ Para el criterio de Hurwicz se utilizará un coeficiente de optimismo de $\alpha
 \
 
 ## Preguntas
+
 \
 
-De acuerdo con los resultados obtenidos al aplicar los distintos criterios de decisión bajo incertidumbre, **seleccione todas las afirmaciones verdaderas y justifique cada respuesta, explicando por qué es verdadera o falsa.**
-\
+De acuerdo con los resultados obtenidos al aplicar los distintos criterios de decisión bajo incertidumbre, **seleccione todas las afirmaciones verdaderas y justifique cada respuesta, explicando por qué es verdadera o falsa.**\
 
 a)  En situación favorable, el criterio de Wald selecciona la alternativa $d_2$.
 
@@ -140,11 +140,12 @@ c)  El criterio de Savage selecciona la alternativa $d_1$ tanto en situación fa
 d)  En situación desfavorable, el criterio de Laplace selecciona la alternativa $d_2$.
 
 e)  El criterio del Punto Ideal selecciona alternativas diferentes en las situaciones favorable y desfavorable.\
-\
+    \
 
 {{< pagebreak >}}
 
 # Problema 4: Expansión internacional de una empresa de jamón ibérico
+
 \
 
 Una empresa española dedicada a la producción y comercialización de jamón ibérico está estudiando la posibilidad de expandirse internacionalmente, introduciendo sus productos en un nuevo mercado.
@@ -176,64 +177,59 @@ Los valores negativos representan posibles pérdidas económicas durante el prim
 
 **¿En qué país debería introducir sus productos la empresa?**
 
-Para responder a esta cuestión, se pide aplicar los criterios de decisión bajo incertidumbre estudiados en la asignatura mediante la función conjunta de R. Se utilizará un coeficiente de optimismo de $\alpha=0.5$ para el criterio de Hurwicz.
-\
+Para responder a esta cuestión, se pide aplicar los criterios de decisión bajo incertidumbre estudiados en la asignatura mediante la función conjunta de R. Se utilizará un coeficiente de optimismo de $\alpha=0.5$ para el criterio de Hurwicz.\
 \
 
 {{< pagebreak >}}
 
 ## Preguntas
+
 \
-De acuerdo con los resultados obtenidos al aplicar los distintos criterios de decisión bajo incertidumbre, **seleccione todas las afirmaciones verdaderas y justifique cada respuesta, explicando por qué es verdadera o falsa.**
-\
+De acuerdo con los resultados obtenidos al aplicar los distintos criterios de decisión bajo incertidumbre, **seleccione todas las afirmaciones verdaderas y justifique cada respuesta, explicando por qué es verdadera o falsa.**\
 
-a) El criterio de Hurwicz, con un coeficiente de optimismo de $\alpha=0.5$, recomienda introducir los productos en Francia.
+a)  El criterio de Hurwicz, con un coeficiente de optimismo de $\alpha=0.5$, recomienda introducir los productos en Francia.
 
-b) Según el criterio de Wald, Alemania es el país recomendado, ya que presenta el mayor beneficio mínimo.
+b)  Según el criterio de Wald, Alemania es el país recomendado, ya que presenta el mayor beneficio mínimo.
 
-c) El criterio de Laplace recomienda Japón, puesto que es el país que puede alcanzar el mayor beneficio posible.
+c)  El criterio de Laplace recomienda Japón, puesto que es el país que puede alcanzar el mayor beneficio posible.
 
-d) Según el criterio de Savage, México es la alternativa que minimiza el máximo arrepentimiento.
+d)  Según el criterio de Savage, México es la alternativa que minimiza el máximo arrepentimiento.
 
-e) El criterio del Punto Ideal recomienda Francia, al presentar la menor distancia euclídea respecto al punto ideal.
-\
-
+e)  El criterio del Punto Ideal recomienda Francia, al presentar la menor distancia euclídea respecto al punto ideal.\
 
 {{< pagebreak >}}
 
 # Problema 5. Fabricación de calzado
+
 \
 
 Una empresa dedicada a la fabricación de calzado debe decidir qué tipo de producto comercializar durante la próxima temporada. La demanda de sus productos depende de las condiciones climatológicas, que no pueden conocerse con certeza en el momento de tomar la decisión.
 
 La empresa contempla tres alternativas de producción: **botas, zapatos y sandalias**. Asimismo, considera tres posibles estados de la naturaleza: una temporada **fría, templada o cálida**.
 
-Tras realizar un estudio de mercado, la empresa ha obtenido las siguientes estimaciones de resultados económicos, expresadas en miles de euros:
-\
+Tras realizar un estudio de mercado, la empresa ha obtenido las siguientes estimaciones de resultados económicos, expresadas en miles de euros:\
 \
 
 ```{=typst}
 #set align(center)
 ```
-
 | Alternativas | Frío | Templado | Cálido |
-|:------------:|:----:|:-------:|:------:|
-| Botas        | 70   | 25      | 5      |
-| Zapatos      | 30   | 45      | 20     |
-| Sandalias    | 5    | 20      | 65     |
+|:------------:|:----:|:--------:|:------:|
+|    Botas     |  70  |    25    |   5    |
+|   Zapatos    |  30  |    45    |   20   |
+|  Sandalias   |  5   |    20    |   65   |
 
 ```{=typst}
 #set align(left)
 ```
 \
 
-Determine qué alternativa de producción resulta más conveniente aplicando los distintos criterios de decisión bajo incertidumbre. Realice el análisis considerando, por una parte, que los resultados económicos representan beneficios que se desean maximizar y, por otra, que representan costes que se pretenden minimizar. Para el criterio de Hurwicz, considere un índice de optimismo de $\alpha = 0.3$.
-\
+Determine qué alternativa de producción resulta más conveniente aplicando los distintos criterios de decisión bajo incertidumbre. Realice el análisis considerando, por una parte, que los resultados económicos representan beneficios que se desean maximizar y, por otra, que representan costes que se pretenden minimizar. Para el criterio de Hurwicz, considere un índice de optimismo de $\alpha = 0.3$.\
 \
 
 ## Preguntas
-A partir de la tabla de decisión, determine cuáles de las siguientes afirmaciones son verdaderas y cuáles son falsas. **Puede haber más de una afirmación verdadera.**
-\
+
+A partir de la tabla de decisión, determine cuáles de las siguientes afirmaciones son verdaderas y cuáles son falsas. **Puede haber más de una afirmación verdadera.**\
 
 **a)** En la situación favorable, los criterios de Wald y Laplace seleccionan la misma alternativa, a pesar de utilizar procedimientos de decisión diferentes.
 
@@ -243,13 +239,13 @@ A partir de la tabla de decisión, determine cuáles de las siguientes afirmacio
 
 **d)** En la situación favorable, el criterio de Savage recomienda fabricar zapatos, aunque el criterio Optimista selecciona fabricar botas.
 
-**e)** Si los resultados representan costes, el criterio de Wald recomienda fabricar botas, mientras que el criterio de Laplace selecciona fabricar zapatos.
-\
+**e)** Si los resultados representan costes, el criterio de Wald recomienda fabricar botas, mientras que el criterio de Laplace selecciona fabricar zapatos.\
 \
 
 {{< pagebreak >}}
 
 # Problema 6. Elección de universidad
+
 \
 
 Lucía acaba de finalizar sus estudios de Bachillerato y debe decidir en qué universidad cursará el próximo año académico. Tras conocer sus notas de admisión, tiene la posibilidad de estudiar en **Sevilla, Granada o Málaga**. Las tres universidades ofrecen la titulación que desea, pero sus gastos serán diferentes dependiendo de la ciudad elegida.
@@ -262,23 +258,21 @@ Por último, si decide estudiar en **Málaga**, deberá pagar **300 euros mensua
 
 Para comparar las tres opciones, Lucía considera que el curso académico tendrá una duración de **10 meses** y que los demás gastos personales serán similares en las tres ciudades.
 
-Además, Lucía ha solicitado una ayuda económica de movilidad ofrecida por un programa universitario para estudiantes que cursan sus estudios fuera de su ciudad de residencia. Si finalmente se la conceden, recibirá **2.000 euros anuales si estudia en Granada** o **3.000 euros si elige Málaga**. En cambio, si permanece en Sevilla, no podrá beneficiarse de esta ayuda. La resolución de la solicitud todavía está pendiente y Lucía no dispone de información suficiente para estimar la probabilidad de obtenerla.
-\
+Además, Lucía ha solicitado una ayuda económica de movilidad ofrecida por un programa universitario para estudiantes que cursan sus estudios fuera de su ciudad de residencia. Si finalmente se la conceden, recibirá **2.000 euros anuales si estudia en Granada** o **3.000 euros si elige Málaga**. En cambio, si permanece en Sevilla, no podrá beneficiarse de esta ayuda. La resolución de la solicitud todavía está pendiente y Lucía no dispone de información suficiente para estimar la probabilidad de obtenerla.\
 \
 
 **¿Qué universidad le recomendaría usted que eligiese, si su objetivo es minimizar los costes de su primer año académico?**
 
-Para resolver el problema, aplique los criterios de Wald, Optimista, Hurwicz, Savage, Laplace y Punto Ideal, considerando una situación desfavorable en la que se pretende minimizar los costes. Para el criterio de Hurwicz, utilice un coeficiente de optimismo de $\alpha = 0.5$.
-\
+Para resolver el problema, aplique los criterios de Wald, Optimista, Hurwicz, Savage, Laplace y Punto Ideal, considerando una situación desfavorable en la que se pretende minimizar los costes. Para el criterio de Hurwicz, utilice un coeficiente de optimismo de $\alpha = 0.5$.\
 \
 
 {{< pagebreak >}}
 
 ## Preguntas
+
 \
 
-A partir de los resultados obtenidos, determine cuáles de las siguientes afirmaciones son verdaderas y cuáles son falsas. **Puede haber más de una afirmación verdadera.**
-\
+A partir de los resultados obtenidos, determine cuáles de las siguientes afirmaciones son verdaderas y cuáles son falsas. **Puede haber más de una afirmación verdadera.**\
 
 **a)** Aunque estudiar en Málaga supone el mayor coste si Lucía no obtiene la beca, es la alternativa seleccionada por el criterio Optimista.
 
@@ -288,6 +282,58 @@ A partir de los resultados obtenidos, determine cuáles de las siguientes afirma
 
 **d)** Si se aplica el criterio de Hurwicz con $\alpha = 0.5$, las alternativas Sevilla y Granada resultan igualmente convenientes.
 
-**e)** La elección de universidad es independiente del criterio de decisión utilizado, ya que Sevilla presenta el menor coste en ausencia de beca.
-\
+**e)** La elección de universidad es independiente del criterio de decisión utilizado, ya que Sevilla presenta el menor coste en ausencia de beca.\
 
+{{< pagebreak >}}
+
+# Problema 7
+
+**Una empresa debe decidir entre tres estrategias de expansión (**$d_1$**,** $d_2$**,** $d_3$**) frente a tres posibles escenarios de mercado (**$e_1$**,** $e_2$**,** $e_3$ **). La matriz de valores es la siguiente:**
+
+| Alternativas/Escenarios | $e_1$ | $e_2$ | $e_3$ |
+|-------------------------|-------|-------|-------|
+| $d_1$                   | 12    | 8     | 20    |
+| $d_2$                   | 18    | 4     | 15    |
+| $d_3$                   | 10    | 14    | 10    |
+
+: Tabla de matriz de valores
+
+### CUESTIONARIO
+
+1.  En situación favorable, el criterio Pesimista (Wald) selecciona la alternativa $d_3$. En situación desfavorable, elige también a $d_3$.
+
+2.  En situación favorable, el criterio Optimista selecciona la alternativa $d_1$. En desfavorable también elige a $d_1$.
+
+3.  En situación desfavorable, el criterio de Laplace determina que la mejor opción es $d_2$. En favorable elige a $d_1$.
+
+4.  Para un alfa=0.5, el criterio de Hurwicz elige a $d_2$ como mejor resultado. Para alfa=0.4 en criterio desfavorable elige a $d_3$.
+
+5.  En situación desfavorable, el criterio savage elige a $d_2$. En favorable elige a $d_1$.
+
+# PROBLEMA 8
+
+**El equipo de fútbol Real de Tomares FC está planificando la próxima temporada y dispone del presupuesto para realizar un único fichaje estrella. La directiva duda entre tres jugadores de élite: Messiano (**$d_1$**), Cristialand (**$d_2$**) y Neyppé Jr. (**$d_3$**).**
+
+**El impacto económico y deportivo (medido en retorno de inversión neto en millones de euros) dependerá del rendimiento futuro e impredecible del jugador elegido en el esquema táctico del entrenador (**$e_1$**: Rendimiento Top,** $e_2$**: Rendimiento medio,** $e_3$**: Rendimiento malo).**
+
+**La matriz de beneficios previstos es la siguiente:**
+
+| Jugador($d_i$)/Rendimiento($e_i$) | Rendimiento Top $e_1$ | Rendimiento medio $e_2$ | Rendimiento malo $e_3$ |
+|-----------------------|-----------------|-----------------|-----------------|
+| **Messiano** ($d_1$) | 90 | 50 | 10 |
+| **Cristialand** ($d_2$) | 100 | 40 | 5 |
+| **Neyppé Jr**($d_3$) | 70 | 60 | 30 |
+
+: Matriz de beneficios
+
+### CUESTIONARIO
+
+1.  El criterio Pesimista (Wald) recomienda fichar a Neyppé Jr.
+
+2.  El criterio Optimista elige a Messiano.
+
+3.  Bajo el criterio de Laplace, la opción escogida es Messiano.
+
+4.  El criterio de Hurwicz (con alfa = 0.5) determina que la alternativa óptima es Cristialand.
+
+5.  Neyppé Jr es el único jugador que evita balances o retornos negativos en el peor escenario posible.
