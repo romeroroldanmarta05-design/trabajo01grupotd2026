@@ -144,7 +144,7 @@ e)  El criterio del Punto Ideal selecciona alternativas diferentes en las situac
 
 {{< pagebreak >}}
 
-# Problema 4: Expansión internacional de una empresa de jamón ibérico
+# Problema 4.
 
 \
 
@@ -199,7 +199,7 @@ e)  El criterio del Punto Ideal recomienda Francia, al presentar la menor distan
 
 {{< pagebreak >}}
 
-# Problema 5. Fabricación de calzado
+# Problema 5. 
 
 \
 
@@ -244,7 +244,7 @@ A partir de la tabla de decisión, determine cuáles de las siguientes afirmacio
 
 {{< pagebreak >}}
 
-# Problema 6. Elección de universidad
+# Problema 6. 
 
 \
 
@@ -290,6 +290,8 @@ A partir de los resultados obtenidos, determine cuáles de las siguientes afirma
 
 **Una empresa debe decidir entre tres estrategias de expansión (**$d_1$**,** $d_2$**,** $d_3$**) frente a tres posibles escenarios de mercado (**$e_1$**,** $e_2$**,** $e_3$ **). La matriz de valores es la siguiente:**
 
+\
+
 | Alternativas/Escenarios | $e_1$ | $e_2$ | $e_3$ |
 |-------------------------|-------|-------|-------|
 | $d_1$                   | 12    | 8     | 20    |
@@ -298,7 +300,9 @@ A partir de los resultados obtenidos, determine cuáles de las siguientes afirma
 
 : Tabla de matriz de valores
 
-### CUESTIONARIO
+\
+
+## Preguntas
 
 1.  En situación favorable, el criterio Pesimista (Wald) selecciona la alternativa $d_3$. En situación desfavorable, elige también a $d_3$.
 
@@ -310,23 +314,33 @@ A partir de los resultados obtenidos, determine cuáles de las siguientes afirma
 
 5.  En situación desfavorable, el criterio savage elige a $d_2$. En favorable elige a $d_1$.
 
-# PROBLEMA 8
+{{< pagebreak >}}
+
+# Problema 8.
 
 **El equipo de fútbol Real de Tomares FC está planificando la próxima temporada y dispone del presupuesto para realizar un único fichaje estrella. La directiva duda entre tres jugadores de élite: Messiano (**$d_1$**), Cristialand (**$d_2$**) y Neyppé Jr. (**$d_3$**).**
 
+\
+
 **El impacto económico y deportivo (medido en retorno de inversión neto en millones de euros) dependerá del rendimiento futuro e impredecible del jugador elegido en el esquema táctico del entrenador (**$e_1$**: Rendimiento Top,** $e_2$**: Rendimiento medio,** $e_3$**: Rendimiento malo).**
+
+\
 
 **La matriz de beneficios previstos es la siguiente:**
 
+\
+
 | Jugador($d_i$)/Rendimiento($e_i$) | Rendimiento Top $e_1$ | Rendimiento medio $e_2$ | Rendimiento malo $e_3$ |
-|-----------------------|-----------------|-----------------|-----------------|
+|---------------------|-----------------|-----------------|-----------------|
 | **Messiano** ($d_1$) | 90 | 50 | 10 |
 | **Cristialand** ($d_2$) | 100 | 40 | 5 |
 | **Neyppé Jr**($d_3$) | 70 | 60 | 30 |
 
 : Matriz de beneficios
 
-### CUESTIONARIO
+\
+
+## Preguntas
 
 1.  El criterio Pesimista (Wald) recomienda fichar a Neyppé Jr.
 
