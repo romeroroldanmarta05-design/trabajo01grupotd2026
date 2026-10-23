@@ -5,16 +5,18 @@ lang: es
 format:
   html:
     toc: true
+    toc-depth: 1
     toc-location: right
   typst:
     toc: true
+    toc-depth: 1
 ---
 
 {{< pagebreak >}}
 
-# Problema 1.
+# Problema 1
 
-## Enunciado.
+## Enunciado
 
 Un decisor debe elegir entre cuatro alternativas, $d_1$, $d_2$, $d_3$ y $d_4$, ante tres posibles estados de la naturaleza, $e_1$, $e_2$ y $e_3$, cuyas probabilidades de ocurrencia son desconocidas.
 
@@ -44,7 +46,7 @@ d)  El criterio de Savage selecciona la misma alternativa óptima en ambas situa
 
 e)  En situación desfavorable, los criterios de Laplace y Punto Ideal seleccionan la misma alternativa óptima.
 
-## Solución.
+## Solución
 
 En primer lugar, introducimos la tabla de decisión en R utilizando la función `crea.tablaX()` del archivo `teoriadecision_funciones_incertidumbre.R` .
 
@@ -378,7 +380,7 @@ knitr::kable(
 
 En situación favorable, la alternativa óptima es $d_4$, ya que presenta la menor distancia al punto ideal, aproximadamente 8.062. En situación desfavorable, la alternativa óptima es $d_1$, cuya distancia al punto ideal es 4. Por tanto, este criterio selecciona alternativas distintas según se consideren beneficios o costes.
 
-## Respuestas a las preguntas.
+## Respuestas a las preguntas
 
 **a) Verdadera.** En situación favorable, Wald selecciona $d_2$, ya que presenta el mayor de los mínimos, con un valor de 15.
 
@@ -394,9 +396,9 @@ Luego, las afirmaciones verdaderas son **a), c) y e)**.
 
 {{< pagebreak >}}
 
-# Problema 2.
+# Problema 2
 
-## Enunciado.
+## Enunciado
 
 El entrenador de un equipo de fútbol debe decidir en qué posición poner a jugar a un joven futbolista de su plantilla para el próximo partido. Se trata de un jugador capaz de desenvolverse en diferentes posiciones de ataque, pero cuyo rendimiento puede variar en función del planteamiento táctico del equipo rival.
 
@@ -438,7 +440,7 @@ d)  El criterio de Savage selecciona la misma alternativa que el criterio de Wal
 
 e)  Los criterios de Laplace y Punto Ideal coinciden en seleccionar la posición de mediapunta ($d_3$).
 
-## Solución.
+## Solución
 
 Primero introducimos en R la tabla de decisión con las valoraciones estimadas para cada posición del jugador y cada posible planteamiento táctico del equipo rival.
 
@@ -477,7 +479,7 @@ knitr::kable(
 )
 ```
 
-## Respuestas a las preguntas.
+## Preguntas
 
 **a) Verdadera.** El criterio de Wald selecciona la alternativa $d_2$ (extremo derecho), ya que presenta el mayor rendimiento mínimo, con una puntuación de 69.
 
@@ -495,11 +497,11 @@ Por tanto, las afirmaciones verdaderas son **a), c) y e)**.
 
 {{< pagebreak >}}
 
-# Problema 3.
+# Problema 3
 
 \
 
-## Enunciado.
+## Enunciado
 
 \
 
@@ -531,7 +533,7 @@ Se pide analizar el problema aplicando los criterios de decisión bajo incertidu
 Para el criterio de Hurwicz se utilizará un coeficiente de optimismo de $\alpha=0.5$.\
 \
 
-## Solución.
+## Solución
 
 Introducimos la matriz de decisión utilizando la función `crea.tablaX()`.
 
@@ -756,7 +758,7 @@ En [situación desfavorable]{.underline}, las decisiones se reparten entre las c
 Por tanto, no existe una única alternativa recomendada por todos los métodos, lo que pone de manifiesto la **importancia** de la **actitud y postura del decisor ante la incertidumbre**.\
 \
 
-## Preguntas.
+## Preguntas
 
 \
 
@@ -793,9 +795,9 @@ Por tanto, **las afirmaciones verdaderas son a), c) y e)**.
 
 {{< pagebreak >}}
 
-# Problema 4.
+# Problema 4
 
-## Enunciado.
+## Enunciado
 
 \
 Una empresa española dedicada a la producción y comercialización de jamón ibérico está estudiando la posibilidad de expandirse internacionalmente, introduciendo sus productos en un nuevo mercado.
@@ -830,7 +832,7 @@ Los valores negativos representan posibles pérdidas económicas durante el prim
 Para responder a esta cuestión, se pide aplicar los criterios de decisión bajo incertidumbre estudiados en la asignatura mediante la función conjunta de R. Se utilizará un coeficiente de optimismo de $\alpha=0.5$ para el criterio de Hurwicz.\
 \
 
-## Solución.
+## Solución
 
 En este problema nos encontramos ante una situación **favorable**, pues la matriz representan BENEFICIOS NETOS y, por tanto, nuestro objetivo es MAXIMIZARLOS.
 
@@ -887,7 +889,7 @@ Por otro lado, México sería la alternativa recomendada si la empresa desea min
 Así que para este caso, no existe una única alternativa recomendada por todos los criterios, y la decisión final dependerá de las preferencias y de la actitud de la empresa ante la incertidumbre.\
 \
 
-## Preguntas.
+## Preguntas
 
 \
 De acuerdo con los resultados obtenidos al aplicar los distintos criterios de decisión bajo incertidumbre, **seleccione todas las afirmaciones verdaderas y justifique cada respuesta, explicando por qué es verdadera o falsa.**\
@@ -921,9 +923,9 @@ Por tanto, **las afirmaciones verdaderas son b), d) y e)**.
 
 {{< pagebreak >}}
 
-# Problema 5. 
+# Problema 5
 
-## Enunciado.
+## Enunciado
 
 Una empresa dedicada a la fabricación de calzado debe decidir qué tipo de producto comercializar durante la próxima temporada. La demanda de sus productos depende de las condiciones climatológicas, que no pueden conocerse con certeza en el momento de tomar la decisión.
 
@@ -967,8 +969,6 @@ Determine qué alternativa de producción resulta más conveniente aplicando los
   - e1 = Frío.
   - e2 = Templado.
   - e3 = Cálido.
-
-## Introducción de datos
 
 La matriz de decisión está formada por los resultados económicos correspondientes a cada alternativa y estado de la naturaleza.
 
@@ -1124,7 +1124,7 @@ En la situación desfavorable, Wald, Hurwicz, Savage y Punto Ideal también sele
 
 Por tanto, no existe una única alternativa óptima para todos los criterios, ya que cada uno considera de manera diferente los resultados posibles ante la incertidumbre.
 
-## Preguntas.
+## Preguntas
 
 A partir de los resultados obtenidos, determine cuáles de las siguientes afirmaciones son verdaderas y cuáles son falsas. Puede haber más de una afirmación verdadera.
 
@@ -1156,7 +1156,7 @@ Por tanto, **la afirmación verdadera es la d)**.
 
 {{< pagebreak >}}
 
-# Problema 6. 
+# Problema 6
 
 ## Enunciado
 
@@ -1185,8 +1185,6 @@ Además, Lucía ha solicitado una ayuda económica de movilidad ofrecida por un 
 - **Estados de la naturaleza:**
   - e1 = Obtener la beca.
   - e2 = No obtener la beca.
-
-## Introducción de datos
 
 Para construir la tabla de decisión, calculamos el coste total del curso académico en cada universidad, considerando los gastos de matrícula, alojamiento y transporte durante los 10 meses.
 
@@ -1309,7 +1307,7 @@ En consecuencia, si Lucía desea evitar gastos elevados y mantener una mayor seg
 
 {{< pagebreak >}}
 
-## Preguntas.
+## Preguntas
 
 A partir de los resultados, determine cuáles de las siguientes afirmaciones son verdaderas y cuáles son falsas. Justifique cada respuesta.
 
@@ -1337,9 +1335,9 @@ e)  La elección de universidad es independiente del criterio de decisión utili
 
 {{< pagebreak >}}
 
-# Problema 7.
+# Problema 7
 
-**Una empresa debe decidir entre tres estrategias de expansión (**$d_1$**,** $d_2$**,** $d_3$**) frente a tres posibles escenarios de mercado (**$e_1$**,** $e_2$**,** $e_3$ **). La matriz de valores es la siguiente:**
+Una empresa debe decidir entre tres estrategias de expansión (**$d_1$**,**$d_2$**,**$d_3$**) frente a tres posibles escenarios de mercado (**$e_1$**,**$e_2$**,**$e_3$ **). La matriz de valores es la siguiente:
 
 | Alternativas/Escenarios | $e_1$ | $e_2$ | $e_3$ |
 |-------------------------|-------|-------|-------|
@@ -1435,11 +1433,11 @@ Por el criterio del Punto Ideal, elegimos a $d_2$.
 
 {{< pagebreak >}}
 
-# Problema 8.
+# Problema 8
 
-**El equipo de fútbol Real de Tomares FC está planificando la próxima temporada y dispone del presupuesto para realizar un único fichaje estrella. La directiva duda entre tres jugadores de élite: Messiano (**$d_1$**), Cristialand (**$d_2$**) y Neyppé Jr. (**$d_3$**).**
+El equipo de fútbol Real de Tomares FC está planificando la próxima temporada y dispone del presupuesto para realizar un único fichaje estrella. La directiva duda entre tres jugadores de élite: Messiano (**$d_1$**), Cristialand (**$d_2$**) y Neyppé Jr. (**$d_3$**).
 
-**El impacto económico y deportivo (medido en retorno de inversión neto en millones de euros) dependerá del rendimiento futuro e impredecible del jugador elegido en el esquema táctico del entrenador (**$e_1$**: Rendimiento Top,** $e_2$**: Rendimiento medio,** $e_3$**: Rendimiento malo).**
+El impacto económico y deportivo (medido en retorno de inversión neto en millones de euros) dependerá del rendimiento futuro e impredecible del jugador elegido en el esquema táctico del entrenador (**$e_1$**: Rendimiento Top,**$e_2$**: Rendimiento medio,**$e_3$**: Rendimiento malo).
 
 **La matriz de beneficios previstos es la siguiente:**
 
@@ -1451,7 +1449,7 @@ Por el criterio del Punto Ideal, elegimos a $d_2$.
 
 : Matriz de beneficios
 
-## Preguntas y soluciones.
+## Preguntas y soluciones
 
 1.  El criterio Pesimista (Wald) recomienda fichar a Neyppé Jr. **VERDADERO**
 
@@ -1470,6 +1468,6 @@ colnames(tablaX2)=c("Top","Medio","Malo")
 criterio.Todos(tablaX2,alfa=0.5,favorable=T)
 ```
 
-## Conclusión.
+## Conclusión
 
 Tal y como podemos ver en la tabla, el criterio Pesimista de Wald elige a Neyppé Jr por ser el que asegura un beneficio mínimo de 30, por tanto la primera afirmacion es **VERDADERA.** La segunda afirmación asegura que por el criterio Optimista, el Real de Tomares debería fichar a Messiano. Viendo la tabla observamos que esta afirmación **FALSA** ya que Cristialand asegura el máximo beneficio. La tercera afirmación nos informa de que a través del criterio de Laplace, el que asegura mayor rendimiento en término medio es Messiano, lo cual vemos a través de la tabla que es **FALSO** ya que el que ofrece mayor rendimiento medio es Neyppé Jr. La cuarta afirmación nos comenta que a través del criterio de Hurwicz ficharíamos a Cristialand, lo cual vemos que es **VERDADERO.** Por último, la última afirmación es **FALSA** ya que ningún jugador da retorno negativo en el caso de que ofrezcan un rendimiento malo.
